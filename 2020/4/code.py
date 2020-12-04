@@ -1,4 +1,10 @@
+# Advent of code Year 2020 Day 4 solution
+# Author = Frazzer951
+# Date = December 2020
 import re
+
+with open((__file__.rstrip("code.py") + "input.txt"), "r") as input_file:
+    input = input_file.readlines()
 
 passports = []
 
@@ -34,21 +40,30 @@ hex_char = [
 
 eye_col = ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"]
 
-with open("Day_4_Input.txt", "r") as f:
-    lines = f.readlines()
-    string = ""
-    for line in lines:
-        if line == "\n":
-            passports.append(string)
-            # print(string)
-            string = ""
-        else:
-            string = string + " " + line.strip("\n")
+string = ""
+for line in input:
+    if line == "\n":
+        passports.append(string)
+        string = ""
+    else:
+        string = string + " " + line.strip("\n")
 passports.append(string)
 
 count = 0
+for passport in passports:
+    valid = True
+    for req in requirements:
+        if req not in passport:
+            valid = False
+            #print("Not Valid, {} not in string {}".format(req, passport))
+            continue
+    if valid:
+        count += 1
+
+print("Part One : " + str(count))
 
 
+count = 0
 for passport in passports:
     valid = True
     for req in requirements:
@@ -64,7 +79,7 @@ for passport in passports:
         year = int(passport[index + 4 : index + 8])
         # print(year)
         if not (year >= 1920 and year <= 2002):
-            #print("byr {} is not between 1920 and 2002".format(year))
+            # print("byr {} is not between 1920 and 2002".format(year))
             continue
 
     if "iyr" in passport:
@@ -72,7 +87,7 @@ for passport in passports:
         year = int(passport[index + 4 : index + 8])
         # print(year)
         if not (year >= 2010 and year <= 2020):
-            #print("iyr {} is not between 2010 and 2020".format(year))
+            # print("iyr {} is not between 2010 and 2020".format(year))
             continue
 
     if "eyr" in passport:
@@ -80,22 +95,22 @@ for passport in passports:
         year = int(passport[index + 4 : index + 8])
         # print(year)
         if not (year >= 2020 and year <= 2030):
-            #print("eyr {} is not between 2020 and 2030".format(year))
+            # print("eyr {} is not between 2020 and 2030".format(year))
             continue
 
     if "hgt" in passport:
         index = passport.index("hgt")
         height = passport[index + 4 : index + 9]
-        #print(height)
+        # print(height)
         if "cm" in height:
             height2 = int(height.split("cm")[0])
             if not (height2 >= 150 and height2 <= 193):
-                #print("{} is not between 150cm and 193cm".format(height))
+                # print("{} is not between 150cm and 193cm".format(height))
                 continue
         elif "in" in height:
             height2 = int(height.split("in")[0])
             if not (height2 >= 59 and height2 <= 76):
-                #print("{} is not between 59in and 76in".format(height))
+                # print("{} is not between 59in and 76in".format(height))
                 continue
         else:
             continue
@@ -105,11 +120,11 @@ for passport in passports:
         if passport[index + 4] != "#":
             continue
         color = passport[index + 5 : index + 11]
-        #print(color)
+        # print(color)
         for char in color:
             if char not in hex_char:
                 valid = False
-                #print("{} in {} is not a valid hex character".format(char, color))
+                # print("{} in {} is not a valid hex character".format(char, color))
                 continue
     if not valid:
         continue
@@ -119,29 +134,15 @@ for passport in passports:
         color = passport[index + 4 : index + 7]
         # print(color)
         if color not in eye_col:
-            #print("{} is not a valid eye_col".format(color))
+            # print("{} is not a valid eye_col".format(color))
             continue
 
     if "pid" in passport:
-        pid_re = re.compile(r'pid:(\d*)')
+        pid_re = re.compile(r"pid:(\d*)")
         pass_id = pid_re.search(passport)[1]
         # print(pass_id)
         if not (pass_id.isnumeric() and len(pass_id) == 9):
-            print("{} is either not numeric or not 9 numbers long".format(pass_id))
+            #print("{} is either not numeric or not 9 numbers long".format(pass_id))
             continue
     count += 1
-
-"""
-byr (Birth Year) - four digits; at least 1920 and at most 2002.
-iyr (Issue Year) - four digits; at least 2010 and at most 2020.
-eyr (Expiration Year) - four digits; at least 2020 and at most 2030.
-hgt (Height) - a number followed by either cm or in:
-If cm, the number must be at least 150 and at most 193.
-If in, the number must be at least 59 and at most 76.
-hcl (Hair Color) - a # followed by exactly six characters 0-9 or a-f.
-ecl (Eye Color) - exactly one of: amb blu brn gry grn hzl oth.
-pid (Passport ID) - a nine-digit number, including leading zeroes.
-cid (Country ID) - ignored, missing or not.
-"""
-
-print("The Number of Valid Passports is {}".format(count))
+print("Part Two : " + str(count))
