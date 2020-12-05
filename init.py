@@ -23,6 +23,7 @@ last_advent_of_code_day = 4         # If the year isn't finished, the setup will
 import os
 import datetime
 import sys
+import html2markdown
 try:
     import requests
 except ImportError:
@@ -92,6 +93,11 @@ for y in years:
                             statement = open(day_pos+"/statement.html", "w+")
                             statement.write(html[start:max(end, end_success)])
                             statement.close()
+
+                            statement_md = open(day_pos+"/statement.md", "w+")
+                            statement_md.write(html2markdown.convert(html[start:max(end, end_success)]))
+                            statement_md.close()
+
                         done = True
                 except requests.exceptions.RequestException:
                     error_count += 1
