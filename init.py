@@ -94,7 +94,7 @@ for y in years:
                             statement.write(html[start:max(end, end_success)])
                             statement.close()
 
-                            statement_md = open(day_pos+"/statement.md", "w+")
+                            statement_md = open(day_pos+"/README.md", "w+")
                             statement_md.write(html2markdown.convert(html[start:max(end, end_success)]))
                             statement_md.close()
 
