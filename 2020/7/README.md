@@ -26,8 +26,6 @@ dotted black bags contain no other bags.
 
 Your puzzle answer was `` 242 ``.
 
-<p class="day-success">The first half of this puzzle is complete! It provides one gold star: *</p>
-
 <article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>It's getting pretty expensive to fly these days - not because of ticket prices, but because of the ridiculous number of bags you need to buy!</p>
 <p>Consider again your <code>shiny gold</code> bag and the rules from the above example:</p>
 <ul>
@@ -50,3 +48,5 @@ dark violet bags contain no other bags.
 <p>In this example, a single <code>shiny gold</code> bag must contain <code><em>126</em></code> other bags.</p>
 <p><em>How many individual bags are required inside your single <code>shiny gold</code> bag?</em></p>
 </article>
+
+Your puzzle answer was `` 176035 ``

@@ -27,6 +27,13 @@ class Bag:
 
         return contents
 
+    def nested_bag_count(self, bags):
+        count = 0
+        for bag in self.contents:
+            count += self.contents[bag]
+            count += self.contents[bag] * bags[bag].nested_bag_count(bags)
+        return count
+
 
 with open((__file__.rstrip("code.py") + "input.txt"), "r") as input_file:
     input = input_file.readlines()
@@ -82,5 +89,19 @@ make_bags(input, bags)
 
 print("Part One : " + str(count_shiny_gold(bags)))
 
+test_input2 = """shiny gold bags contain 2 dark red bags.
+dark red bags contain 2 dark orange bags.
+dark orange bags contain 2 dark yellow bags.
+dark yellow bags contain 2 dark green bags.
+dark green bags contain 2 dark blue bags.
+dark blue bags contain 2 dark violet bags.
+dark violet bags contain no other bags.""".split(
+    "\n"
+)
 
-print("Part Two : " + str(None))
+test_bags2 = {}
+make_bags(test_input2, test_bags2)
+
+print("Test Input : " + str(test_bags2["shiny gold"].nested_bag_count(test_bags2)))
+
+print("Part Two : " + str(bags["shiny gold"].nested_bag_count(bags)))
