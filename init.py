@@ -12,13 +12,13 @@ DOWNLOAD_INPUTS = True     # Set to false to not download inputs. Note that if t
 MAKE_CODE_TEMPLATE = True  # Set to false to not make code templates. Note that even if OVERWRITE is set to True, it will never overwrite codes.
 MAKE_URL = True            # Set to false to not create a direct url link in the folder.
 author = "Frazzer951"               # Name automatically put in the code templates.
-OVERWRITE = False          # If you really need to download the whole thing again, set this to true. As the creator said, AoC is fragile; please be gentle. Statements and Inputs do not change. This will not overwrite codes.
+OVERWRITE = True          # If you really need to download the whole thing again, set this to true. As the creator said, AoC is fragile; please be gentle. Statements and Inputs do not change. This will not overwrite codes.
 
 # DATE SPECIFIC PARAMETERS
 date = "December 2020"              # Date automatically put in the code templates.
 starting_advent_of_code_year = 2020 # You can go as early as 2015.
 last_advent_of_code_year = 2020     # The setup will download all advent of code data up until that date included
-last_advent_of_code_day = 5         # If the year isn't finished, the setup will download days up until that day included for the last year
+last_advent_of_code_day = 6         # If the year isn't finished, the setup will download days up until that day included for the last year
 # Imports
 import os
 import datetime
