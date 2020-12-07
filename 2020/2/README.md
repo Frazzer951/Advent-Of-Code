@@ -23,6 +23,7 @@ Your puzzle answer was `` 524 ``.
 <li><code>1-3 b: <em>c</em>d<em>e</em>fg</code> is <em>invalid</em>: neither position <code>1</code> nor position <code>3</code> contains <code>b</code>.</li>
 <li><code>2-9 c: c<em>c</em>cccccc<em>c</em></code> is <em>invalid</em>: both position <code>2</code> and position <code>9</code> contain <code>c</code>.</li>
 </ul>
-<p><em>How many passwords are valid</em> according to the new interpretation of the policies?</p></article>
+<p><em>How many passwords are valid</em> according to the new interpretation of the policies?</p>
+</article>
 
 Your puzzle answer was `` 485 ``
