@@ -18,7 +18,7 @@ OVERWRITE = True          # If you really need to download the whole thing again
 date = "December 2020"              # Date automatically put in the code templates.
 starting_advent_of_code_year = 2020 # You can go as early as 2015.
 last_advent_of_code_year = 2020     # The setup will download all advent of code data up until that date included
-last_advent_of_code_day = 7         # If the year isn't finished, the setup will download days up until that day included for the last year
+last_advent_of_code_day = 9         # If the year isn't finished, the setup will download days up until that day included for the last year
 # Imports
 import os
 import datetime
@@ -51,7 +51,7 @@ for y in years:
         day_pos = year_pos+"/"+str(d)
         if MAKE_CODE_TEMPLATE and not os.path.exists(day_pos+"/code.py"):
             code = open(day_pos+"/code.py", "w+")
-            code.write("# Advent of code Year "+str(y)+" Day "+str(d)+" solution\n# Author = "+author+"\n# Date = "+date+"\n\nwith open((__file__.rstrip(\"code.py\")+\"input.txt\"), 'r') as input_file:\n    input = input_file.readlines()\n\n\n\nprint(\"Part One : \"+ str(None))\n\n\n\nprint(\"Part Two : \"+ str(None))")
+            code.write("# Advent of code Year "+str(y)+" Day "+str(d)+" solution\n# Author = "+author+"\n# Date = "+date+"\n\nwith open((__file__.rstrip(\"code.py\")+\"input.txt\"), 'r') as input_file:\n    input = input_file.read().split('\n')\n\n\n\nprint(\"Part One : \"+ str(None))\n\n\n\nprint(\"Part Two : \"+ str(None))")
             code.close()
         if DOWNLOAD_INPUTS and (not os.path.exists(day_pos+"/input.txt") or OVERWRITE)and USER_SESSION_ID != "":
             done = False
