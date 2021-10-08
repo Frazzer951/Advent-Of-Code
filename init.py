@@ -6,19 +6,19 @@
 
 # USER SPECIFIC PARAMETERS
 base_pos = "./"            # Folders will be created here. If you want to make a parent folder, change this to ex "./adventofcode/"
-USER_SESSION_ID = "53616c7465645f5f25f3a70f87185bdc9f59a37ca1d0adf61adf5e88903a8f03d9eb62b63695c8bd5ac55079c27803b9"       # Get your session by inspecting the session cookie content in your web browser while connected to adventofcode and paste it here as plain text in between the ". Leave at is to not download inputs.
+USER_SESSION_ID = "53616c7465645f5f5d2a3fe3c0c1b327af37d5637cf092c2169e2a900269a65e047e30ef21a0d130cc9d80d42922722d"       # Get your session by inspecting the session cookie content in your web browser while connected to adventofcode and paste it here as plain text in between the ". Leave at is to not download inputs.
 DOWNLOAD_STATEMENTS = True # Set to false to not download statements. Note that only part one is downloaded (since you need to complete it to access part two)
 DOWNLOAD_INPUTS = True     # Set to false to not download inputs. Note that if the USER_SESSION_ID is wrong or left empty, inputs will not be downloaded.
 MAKE_CODE_TEMPLATE = True  # Set to false to not make code templates. Note that even if OVERWRITE is set to True, it will never overwrite codes.
 MAKE_URL = True            # Set to false to not create a direct url link in the folder.
-author = "Frazzer951"               # Name automatically put in the code templates.
+author = "Frazzer951"      # Name automatically put in the code templates.
 OVERWRITE = False          # If you really need to download the whole thing again, set this to true. As the creator said, AoC is fragile; please be gentle. Statements and Inputs do not change. This will not overwrite codes.
 
 # DATE SPECIFIC PARAMETERS
-date = "December 2020"              # Date automatically put in the code templates.
-starting_advent_of_code_year = 2020 # You can go as early as 2015.
-last_advent_of_code_year = 2020     # The setup will download all advent of code data up until that date included
-last_advent_of_code_day = 14         # If the year isn't finished, the setup will download days up until that day included for the last year
+date = "October 2021"               # Date automatically put in the code templates.
+starting_advent_of_code_year = 2015 # You can go as early as 2015.
+last_advent_of_code_year = 2021     # The setup will download all advent of code data up until that date included
+last_advent_of_code_day = 0         # If the year isn't finished, the setup will download days up until that day included for the last year
 # Imports
 import os
 import datetime
