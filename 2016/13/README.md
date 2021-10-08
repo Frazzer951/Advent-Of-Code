@@ -34,3 +34,5 @@
 <p>Thus, reaching <code>7,4</code> would take a minimum of <code>11</code> steps (starting from your current location, <code>1,1</code>).</p>
 <p>What is the <em>fewest number of steps required</em> for you to reach <code>31,39</code>?</p>
 </article>
+
+Your puzzle input is <code class="puzzle-input">1352</code>

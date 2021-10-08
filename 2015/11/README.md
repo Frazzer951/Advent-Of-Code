@@ -17,3 +17,5 @@
 </ul>
 <p>Given Santa's current password (your puzzle input), what should his <em>next password</em> be?</p>
 </article>
+
+Your puzzle input is <code class="puzzle-input">cqjxjnds</code>

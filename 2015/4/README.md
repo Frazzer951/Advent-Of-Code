@@ -6,3 +6,5 @@
 <li>If your secret key is <code>pqrstuv</code>, the lowest number it combines with to make an MD5 hash starting with five zeroes is <code>1048970</code>; that is, the MD5 hash of <code>pqrstuv1048970</code> looks like <code>000006136ef...</code>.</li>
 </ul>
 </article>
+
+Your puzzle input is <code class="puzzle-input">yzbqklnj</code>

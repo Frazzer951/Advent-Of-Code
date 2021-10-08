@@ -10,3 +10,5 @@
 </ul>
 <p>Starting with the digits in your puzzle input, apply this process 40 times.  What is <em>the length of the result</em>?</p>
 </article>
+
+Your puzzle input is <code class="puzzle-input">1113222113</code>

@@ -71,8 +71,6 @@
 
 Your puzzle answer was `` 2312 ``.
 
-<p class="day-success">The first half of this puzzle is complete! It provides one gold star: *</p>
-
 <article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>To completely determine whether you have enough adapters, you'll need to figure out how many different ways they can be arranged. Every arrangement needs to connect the charging outlet to your device. The previous rules about when adapters can successfully connect still apply.</p>
 <p>The first example above (the one that starts with <code>16</code>, <code>10</code>, <code>15</code>) supports the following arrangements:</p>
 <pre><code>(0), 1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19, (22)
@@ -120,3 +118,5 @@ Your puzzle answer was `` 2312 ``.
 <p>You glance back down at your bag and try to remember why you brought so many adapters; there must be <em>more than a trillion</em> valid ways to arrange them! Surely, there must be <span title="Definitely itertools.">an efficient way</span> to count the arrangements.</p>
 <p><em>What is the total number of distinct ways you can arrange the adapters to connect the charging outlet to your device?</em></p>
 </article>
+
+Your puzzle answer was `` 12089663946752 ``

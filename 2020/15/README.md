@@ -32,3 +32,5 @@
 </ul>
 <p>Given your starting numbers, <em>what will be the <code>2020</code>th number spoken?</em></p>
 </article>
+
+Your puzzle input is <code class="puzzle-input">5,1,9,18,13,8,0</code>

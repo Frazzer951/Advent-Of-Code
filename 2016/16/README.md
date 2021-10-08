@@ -39,3 +39,5 @@
 <p>In this example, the correct checksum would therefore be <code>01100</code>.</p>
 <p>The first disk you have to fill has length <code>272</code>. Using the initial state in your puzzle input, <em>what is the correct checksum</em>?</p>
 </article>
+
+Your puzzle input is <code class="puzzle-input">01000100010010111</code>
