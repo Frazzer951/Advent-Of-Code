@@ -2,31 +2,40 @@
 # Author = Frazzer951
 # Date = October 2021
 
+import json
+
 with open((__file__.rstrip("code.py") + "input.txt"), "r") as input_file:
-    input = input_file.read().split("\n")
+    input = json.load(input_file)
 
 
-def part1(input):
-    pass
+def sum_of_nums(item, skipRed=False):
+    if isinstance(item, list):
+        return sum([sum_of_nums(i, skipRed) for i in item])
+    if isinstance(item, dict):
+        if skipRed and "red" in item.values():
+            return 0
+        return sum([sum_of_nums(i, skipRed) for i in item.values()])
+    if isinstance(item, int):
+        return item
+    return 0
 
 
-t1 = part1([""])
-print("Part One Test 1: " + str(t1))
-t2 = part1([""])
-print("Part One Test 2: " + str(t2))
+assert sum_of_nums([1, 2, 3]) == 6
+assert sum_of_nums({"a": 2, "b": 4}) == 6
+assert sum_of_nums([[[3]]]) == 3
+assert sum_of_nums({"a": {"b": 4}, "c": -1}) == 3
+assert sum_of_nums({"a": [-1, 1]}) == 0
+assert sum_of_nums([-1, {"a": 1}]) == 0
+assert sum_of_nums([]) == 0
+assert sum_of_nums({}) == 0
 
-p1 = part1(input)
+p1 = sum_of_nums(input)
 print("Part One : " + str(p1))
 
+assert sum_of_nums([1, 2, 3], True) == 6
+assert sum_of_nums([1, {"c": "red", "b": 2}, 3], True) == 4
+assert sum_of_nums({"d": "red", "e": [1, 2, 3, 4], "f": 5}, True) == 0
+assert sum_of_nums([1, "red", 5], True) == 6
 
-def part2(input):
-    pass
-
-
-t3 = part2([""])
-print("Part Two Test 1: " + str(t3))
-t4 = part2([""])
-print("Part Two Test 2: " + str(t4))
-
-p2 = part2(input)
+p2 = sum_of_nums(input, True)
 print("Part Two : " + str(p2))
