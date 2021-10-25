@@ -2,31 +2,35 @@
 # Author = Frazzer951
 # Date = October 2021
 
+import math
+
 with open((__file__.rstrip("code.py") + "input.txt"), "r") as input_file:
     input = input_file.read().split("\n")
 
 
-def part1(input):
-    pass
+def firstHouseOverNum(n):
+    house = [0] * int(n / 10)
+    for i in range(1, int(n / 10)):
+        for j in range(i, int(n / 10), i):
+            house[j] += i * 10
+    for i in range(len(house)):
+        if house[i] >= n:
+            return i
 
 
-t1 = part1([""])
-print("Part One Test 1: " + str(t1))
-t2 = part1([""])
-print("Part One Test 2: " + str(t2))
-
-p1 = part1(input)
+p1 = firstHouseOverNum(33100000)
 print("Part One : " + str(p1))
 
 
-def part2(input):
-    pass
+def firstHouseOverNum2(n):
+    house = [0] * int(n / 10)
+    for i in range(1, int(n / 10)):
+        for j in range(i, min(int(n / 10), 50 * i), i):
+            house[j] += i * 11
+    for i in range(len(house)):
+        if house[i] >= n:
+            return i
 
 
-t3 = part2([""])
-print("Part Two Test 1: " + str(t3))
-t4 = part2([""])
-print("Part Two Test 2: " + str(t4))
-
-p2 = part2(input)
+p2 = firstHouseOverNum2(33100000)
 print("Part Two : " + str(p2))
