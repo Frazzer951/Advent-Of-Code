@@ -6,27 +6,49 @@ with open((__file__.rstrip("code.py") + "input.txt"), "r") as input_file:
     input = input_file.read().split("\n")
 
 
-def part1(input):
-    pass
+def sim_code(input, registers={"a": 0, "b": 0}):
+    ip = 0
+    while ip < len(input):
+        line = input[ip].split()
+        if line[0] == "hlf":
+            reg = line[1]
+            registers[reg] = registers[reg] // 2
+        elif line[0] == "tpl":
+            reg = line[1]
+            registers[reg] = registers[reg] * 3
+        elif line[0] == "inc":
+            reg = line[1]
+            registers[reg] += 1
+        elif line[0] == "jmp":
+            ip += int(line[1])
+            continue
+        elif line[0] == "jie":
+            reg = line[1].strip(",")
+            if registers[reg] % 2 == 0:
+                ip += int(line[2])
+                continue
+        elif line[0] == "jio":
+            reg = line[1].strip(",")
+            if registers[reg] == 1:
+                ip += int(line[2])
+                continue
+        ip += 1
+    return registers
 
 
-t1 = part1([""])
+t1 = sim_code(
+    [
+        "inc a",
+        "jio a, +2",
+        "tpl a",
+        "inc a  ",
+    ]
+)
 print("Part One Test 1: " + str(t1))
-t2 = part1([""])
-print("Part One Test 2: " + str(t2))
+assert t1["a"] == 2
 
-p1 = part1(input)
+p1 = sim_code(input)
 print("Part One : " + str(p1))
 
-
-def part2(input):
-    pass
-
-
-t3 = part2([""])
-print("Part Two Test 1: " + str(t3))
-t4 = part2([""])
-print("Part Two Test 2: " + str(t4))
-
-p2 = part2(input)
+p2 = sim_code(input, {"a": 1, "b": 0})
 print("Part Two : " + str(p2))
