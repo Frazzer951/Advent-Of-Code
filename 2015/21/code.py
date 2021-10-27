@@ -36,7 +36,7 @@ t2 = simFight(player, boss)
 assert t2 == False
 
 
-def minCoinsNeeded(bossStats):
+def CoinsNeeded(bossStats):
     weapons = {
         "Dagger": [8, 4, 0],
         "Shortsword": [10, 5, 0],
@@ -64,6 +64,7 @@ def minCoinsNeeded(bossStats):
 
     # Generate all possible combinations of items
     minCost = math.inf
+    maxCost = -math.inf
     for weapon in weapons:
         for armor in armors:
             for ring1 in rings:
@@ -89,22 +90,12 @@ def minCoinsNeeded(bossStats):
                     )
                     if simFight(player, boss):
                         minCost = min(minCost, cost)
-    return minCost
+                    else:
+                        maxCost = max(maxCost, cost)
+    return minCost, maxCost
 
 
 boss = stats(109, 8, 2)
-p1 = minCoinsNeeded(boss)
-print("Part One : " + str(p1))
-
-
-def part2(input):
-    pass
-
-
-t3 = part2([""])
-print("Part Two Test 1: " + str(t3))
-t4 = part2([""])
-print("Part Two Test 2: " + str(t4))
-
-p2 = part2(input)
-print("Part Two : " + str(p2))
+coins = CoinsNeeded(boss)
+print(f"Min Coins needed to win: {coins[0]}")
+print(f"Max Coins and still loose: {coins[1]}")
