@@ -2,7 +2,7 @@
 
 ## Advent of code problems solved
 * 2015
-    * Days 1-21a
+    * Days 1-21
 * 2016
     * /
 * 2017
