@@ -2,31 +2,33 @@
 # Author = Frazzer951
 # Date = October 2021
 
+from functools import reduce
+from itertools import combinations
+from operator import mul
+
 with open((__file__.rstrip("code.py") + "input.txt"), "r") as input_file:
     input = input_file.read().split("\n")
+nums = [int(i) for i in input]
 
 
-def part1(input):
-    pass
+def splitPresents(weights, num_groups):
+    group_size = sum(weights) // num_groups
+    for i in range(len(weights)):
+        qes = [reduce(mul, c) for c in combinations(weights, i) if sum(c) == group_size]
+        if qes:
+            return min(qes)
 
 
-t1 = part1([""])
+t1 = splitPresents([1, 2, 3, 4, 5, 7, 8, 9, 10, 11], 3)
 print("Part One Test 1: " + str(t1))
-t2 = part1([""])
-print("Part One Test 2: " + str(t2))
+assert t1 == 99
 
-p1 = part1(input)
+p1 = splitPresents(nums, 3)
 print("Part One : " + str(p1))
 
-
-def part2(input):
-    pass
-
-
-t3 = part2([""])
+t3 = splitPresents([1, 2, 3, 4, 5, 7, 8, 9, 10, 11], 4)
 print("Part Two Test 1: " + str(t3))
-t4 = part2([""])
-print("Part Two Test 2: " + str(t4))
+assert t3 == 44
 
-p2 = part2(input)
+p2 = splitPresents(nums, 4)
 print("Part Two : " + str(p2))
