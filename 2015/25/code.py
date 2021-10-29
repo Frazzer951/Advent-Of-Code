@@ -5,28 +5,31 @@
 with open((__file__.rstrip("code.py") + "input.txt"), "r") as input_file:
     input = input_file.read().split("\n")
 
-
-def part1(input):
-    pass
+input = input[0].split()
 
 
-t1 = part1([""])
+def getCode(x, y):
+    pos = (x + y - 2) * (x + y - 1) // 2 + y - 1
+
+    val = 20151125
+
+    for i in range(pos):
+        val = val * 252533 % 33554393
+
+    return val
+
+
+t1 = getCode(1, 1)
 print("Part One Test 1: " + str(t1))
-t2 = part1([""])
+assert t1 == 20151125
+t2 = getCode(2, 1)
 print("Part One Test 2: " + str(t2))
+assert t2 == 31916031
+t3 = getCode(5, 3)
+print("Part One Test 2: " + str(t2))
+assert t3 == 28094349
 
-p1 = part1(input)
+x = int(input[-3].strip(","))
+y = int(input[-1].strip("."))
+p1 = getCode(x, y)
 print("Part One : " + str(p1))
-
-
-def part2(input):
-    pass
-
-
-t3 = part2([""])
-print("Part Two Test 1: " + str(t3))
-t4 = part2([""])
-print("Part Two Test 2: " + str(t4))
-
-p2 = part2(input)
-print("Part Two : " + str(p2))
