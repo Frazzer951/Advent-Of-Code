@@ -18,4 +18,15 @@
 <p>Given Santa's current password (your puzzle input), what should his <em>next password</em> be?</p>
 </article>
 
-Your puzzle input is <code class="puzzle-input">cqjxjnds</code>
+Your puzzle answer was `` cqjxxyzz ``.
+
+<article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>Santa's password <span title="The corporate policy says your password expires after 12 seconds.  For security.">expired again</span>.  What's the next one?</p>
+</article>
+
+Your puzzle answer was `` cqkaabcc ``.
+
+<p class="day-success">Both parts of this puzzle are complete! They provide two gold stars: **</p>
+
+At this point, all that is left is for you to [admire your Advent calendar](/2015).
+
+Your puzzle input was <code class="puzzle-input">cqjxjnds</code>

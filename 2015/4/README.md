@@ -7,4 +7,15 @@
 </ul>
 </article>
 
-Your puzzle input is <code class="puzzle-input">yzbqklnj</code>
+Your puzzle answer was `` 282749 ``.
+
+<article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>Now find one that starts with <em>six zeroes</em>.</p>
+</article>
+
+Your puzzle answer was `` 9962624 ``.
+
+<p class="day-success">Both parts of this puzzle are complete! They provide two gold stars: **</p>
+
+At this point, all that is left is for you to [admire your Advent calendar](/2015).
+
+Your puzzle input was <code class="puzzle-input">yzbqklnj</code>

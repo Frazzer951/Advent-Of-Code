@@ -11,4 +11,16 @@
 <p>Starting with the digits in your puzzle input, apply this process 40 times.  What is <em>the length of the result</em>?</p>
 </article>
 
-Your puzzle input is <code class="puzzle-input">1113222113</code>
+Your puzzle answer was `` 252594 ``.
+
+<article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>Neat, right? You might also enjoy hearing <a href="https://www.youtube.com/watch?v=ea7lJkEhytA">John Conway talking about this sequence</a> (that's Conway of <em>Conway's Game of Life</em> fame).</p>
+<p>Now, starting again with the digits in your puzzle input, apply this process <em title="Only because any longer started taking alarmingly long on my test hardware, and I wanted to avoid excluding people.">50</em> times.  What is <em>the length of the new result</em>?</p>
+</article>
+
+Your puzzle answer was `` 3579328 ``.
+
+<p class="day-success">Both parts of this puzzle are complete! They provide two gold stars: **</p>
+
+At this point, all that is left is for you to [admire your Advent calendar](/2015).
+
+Your puzzle input was <code class="puzzle-input">1113222113</code>

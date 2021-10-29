@@ -21,4 +21,16 @@ House 9 got 130 presents.
 <p>What is the <em>lowest house number</em> of the house to get at least as many presents as the number in your puzzle input?</p>
 </article>
 
-Your puzzle input is <code class="puzzle-input">33100000</code>
+Your puzzle answer was `` 776160 ``.
+
+<article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>The Elves decide they don't want to visit an infinite number of houses.  Instead, each Elf will stop after delivering presents to <code>50</code> houses.  To make up for it, they decide to deliver presents equal to <em>eleven times</em> their number at each house.</p>
+<p>With these changes, what is the new <em>lowest house number</em> of the house to get at least as many presents as the number in your puzzle input?</p>
+</article>
+
+Your puzzle answer was `` 786240 ``.
+
+<p class="day-success">Both parts of this puzzle are complete! They provide two gold stars: **</p>
+
+At this point, all that is left is for you to [admire your Advent calendar](/2015).
+
+Your puzzle input was <code class="puzzle-input">33100000</code>

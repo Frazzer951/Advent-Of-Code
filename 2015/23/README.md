@@ -18,3 +18,10 @@ inc a
 </code></pre>
 <p>What is <em>the value in register <code>b</code></em> when the program in your puzzle input is finished executing?</p>
 </article>
+
+Your puzzle answer was `` 184 ``.
+
+<article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>The unknown benefactor is <em>very</em> thankful for releasi-- er, helping little Jane Marie with her computer.  Definitely not to distract you, what is the value in register <code>b</code> after the program is finished executing if register <code>a</code> starts as <code>1</code> instead?</p>
+</article>
+
+Your puzzle answer was `` 231 ``

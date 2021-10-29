@@ -30,3 +30,9 @@
 <p>"Now remember", the voice continues, "that's not even all of the first few numbers; for example, you're missing the one at 7,1 that would come before 6,2.  But, it should be enough to let your-- oh, it's time for lunch!  Bye!"  The call disconnects.</p>
 <p>Santa looks nervous.  Your puzzle input contains the message on the machine's console.  <em>What code do you give the machine?</em></p>
 </article>
+
+Your puzzle answer was `` 8997277 ``.
+
+<article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>The machine springs to life, then falls silent again.  It beeps.  "Insufficient fuel", the console reads.  "<em class="star">Fifty stars</em> are required before proceeding.  <em class="star">One star</em> is available."</p>
+<p>..."one star is available"?  You check the fuel tank; sure enough, a lone star sits at the bottom, awaiting its friends.  Looks like you need to provide 49 yourself.</p>
+</article>

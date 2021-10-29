@@ -39,3 +39,11 @@ Defense +3   80     0       3
 <p>In this scenario, the player wins!  (Barely.)</p>
 <p>You have <em>100 hit points</em>.  The boss's actual stats are in your puzzle input.  What is <em>the least amount of gold you can spend</em> and still win the fight?</p>
 </article>
+
+Your puzzle answer was `` 111 ``.
+
+<article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>Turns out the shopkeeper is working with the boss, and can persuade you to buy whatever items he wants. The other rules still apply, and he still only has one of each item.</p>
+<p>What is the <em>most</em> amount of gold you can spend and still <em>lose</em> the fight?</p>
+</article>
+
+Your puzzle answer was `` 188 ``
