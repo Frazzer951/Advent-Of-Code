@@ -64,9 +64,52 @@ p1 = numBlocksAway(input)
 print("Part One : " + str(p1))
 
 
-t4 = numBlocksAway(["R8", "R4", "R4", "R8"], True)
+def numBlocksAway(moves):
+    locations = []
+    x = 0
+    y = 0
+    dir = "n"
+    for move in moves:
+        if move[0] == "R":
+            dir = rotate(dir, "R")
+        elif move[0] == "L":
+            dir = rotate(dir, "L")
+
+        amount = int(move[1:])
+        if dir == "n":
+            for i in range(y, y + amount):
+                if (x, i) in locations:
+                    return abs(x) + abs(i)
+                else:
+                    locations.append((x, i))
+            y += amount
+        elif dir == "e":
+            for i in range(x, x + amount):
+                if (i, y) in locations:
+                    return abs(i) + abs(y)
+                else:
+                    locations.append((i, y))
+            x += amount
+        elif dir == "s":
+            for i in range(y, y - amount, -1):
+                if (x, i) in locations:
+                    return abs(x) + abs(i)
+                else:
+                    locations.append((x, i))
+            y -= amount
+        elif dir == "w":
+            for i in range(x, x - amount, -1):
+                if (i, y) in locations:
+                    return abs(i) + abs(y)
+                else:
+                    locations.append((i, y))
+            x -= amount
+    return abs(x) + abs(y)
+
+
+t4 = numBlocksAway(["R8", "R4", "R4", "R8"])
 print("Part Two Test 1: " + str(t4))
 assert t4 == 4, f"Expected 4 got {t4}"
 
-p2 = numBlocksAway(input, True)
+p2 = numBlocksAway(input)
 print("Part Two : " + str(p2))
