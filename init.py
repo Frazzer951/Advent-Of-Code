@@ -15,12 +15,12 @@ author = "Frazzer951"  # Name automatically put in the code templates.
 OVERWRITE = False  # If you really need to download the whole thing again, set this to true. As the creator said, AoC is fragile; please be gentle. Statements and Inputs do not change. This will not overwrite codes.
 
 # DATE SPECIFIC PARAMETERS
-date = "October 2021"  # Date automatically put in the code templates.
+date = "November 2021"  # Date automatically put in the code templates.
 starting_advent_of_code_year = 2015  # You can go as early as 2015.
 last_advent_of_code_year = (
     2016  # The setup will download all advent of code data up until that date included
 )
-last_advent_of_code_day = 1  # If the year isn't finished, the setup will download days up until that day included for the last year
+last_advent_of_code_day = 25  # If the year isn't finished, the setup will download days up until that day included for the last year
 # Imports
 import os
 import datetime
