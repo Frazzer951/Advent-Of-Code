@@ -4,9 +4,13 @@
 # Author = Alexe Simon & Luke Eltiste
 # Date = 10/08/2021
 
+import session_id
+
 # USER SPECIFIC PARAMETERS
 base_pos = "./"  # Folders will be created here. If you want to make a parent folder, change this to ex "./adventofcode/"
-USER_SESSION_ID = "53616c7465645f5f5d2a3fe3c0c1b327af37d5637cf092c2169e2a900269a65e047e30ef21a0d130cc9d80d42922722d"  # Get your session by inspecting the session cookie content in your web browser while connected to adventofcode and paste it here as plain text in between the ". Leave at is to not download inputs.
+USER_SESSION_ID = (
+    session_id.USER_SESSION_ID
+)  # Get your session by inspecting the session cookie content in your web browser while connected to adventofcode and paste it here as plain text in between the ". Leave at is to not download inputs.
 DOWNLOAD_STATEMENTS = True  # Set to false to not download statements. Note that only part one is downloaded (since you need to complete it to access part two)
 DOWNLOAD_INPUTS = True  # Set to false to not download inputs. Note that if the USER_SESSION_ID is wrong or left empty, inputs will not be downloaded.
 MAKE_CODE_TEMPLATE = True  # Set to false to not make code templates. Note that even if OVERWRITE is set to True, it will never overwrite codes.
