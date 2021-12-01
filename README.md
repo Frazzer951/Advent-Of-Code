@@ -8,5 +8,6 @@ Collection of my Advent of Code solutions in an overkill project setup 👻🎄.
 Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/adventofcode)
 
 <!-- start completed section -->
+## Completed ⭐️
 
 <!-- end completed section -->
