@@ -4,25 +4,28 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "src/adventofcode/year_*/**"
+      - "src/adventofcode/scripts/generate_readme.py"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: "3.9"
-    - name: Install package
-      run: |
-        python -m pip install --upgrade pip
-        pip install -e .
-    - name: Generate new README
-      run: generate-readme
-    - name: Commit new README
-      run: |
-        git config --global user.name 'Frazzer951'
-        git config --global user.email 'luke343279@gmail.com'
-        [[ -n $(git status -s) ]] && git commit -am "docs: update README"
-        git push
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+      - name: Generate new README
+        run: generate-readme
+      - name: Commit new README
+        run: |
+          git config --global user.name 'Frazzer951'
+          git config --global user.email 'luke343279@gmail.com'
+          [[ -n $(git status -s) ]] && git commit -am "docs: update README"
+          git push

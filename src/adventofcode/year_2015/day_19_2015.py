@@ -1,6 +1,5 @@
 from typing import List
 
-from adventofcode.util.exceptions import SolutionNotFoundException
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
@@ -14,8 +13,8 @@ def numReplacements(replacements, molecule):
     maxKeySize = max([len(key) for key in replacements])
     for i in range(len(molecule)):
         for j in range(maxKeySize):
-            if molecule[i : i + j + 1] in replacements:
-                for newMolecule in replacements[molecule[i : i + j + 1]]:
+            if molecule[i: i + j + 1] in replacements:
+                for newMolecule in replacements[molecule[i: i + j + 1]]:
                     newMolecules.append(replace(molecule, i, i + j + 1, newMolecule))
     return len(set(newMolecules))
 
@@ -26,11 +25,11 @@ def part_one(input_data: List[str]):
     input_data = input_data[:-2]
     replacements = dict()
     for line in input_data:
-        line = line.split(" => ")
-        if line[0] not in replacements:
-            replacements[line[0]] = [line[1]]
+        replace = line.split(" => ")
+        if replace[0] not in replacements:
+            replacements[replace[0]] = [replace[1]]
         else:
-            replacements[line[0]].append(line[1])
+            replacements[replace[0]].append(replace[1])
     return numReplacements(replacements, molecule)
 
 
@@ -40,11 +39,11 @@ def part_two(input_data: List[str]):
     input_data = input_data[:-2]
     replacements = dict()
     for line in input_data:
-        line = line.split(" => ")
-        if line[0] not in replacements:
-            replacements[line[0]] = [line[1]]
+        replace = line.split(" => ")
+        if replace[0] not in replacements:
+            replacements[replace[0]] = [replace[1]]
         else:
-            replacements[line[0]].append(line[1])
+            replacements[replace[0]].append(replace[1])
     molecule = molecule.replace("Rn", "(")
     molecule = molecule.replace("Ar", ")")
     molecule = molecule.replace("Y", ",")

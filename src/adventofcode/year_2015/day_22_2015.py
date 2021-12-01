@@ -1,6 +1,5 @@
-from typing import List
+from typing import List, Dict
 
-from adventofcode.util.exceptions import SolutionNotFoundException
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
@@ -97,7 +96,7 @@ def try_all_spells(game, min_mana_spent, new_games):
 
 
 def try_all_games(games, min_mana_spent, part2):
-    new_games = []
+    new_games: List[Dict[str, int]] = []
     for game in games:
         if part2:
             game["player_hp"] -= 1

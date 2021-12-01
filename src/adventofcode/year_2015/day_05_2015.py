@@ -1,6 +1,5 @@
 from typing import List
 
-from adventofcode.util.exceptions import SolutionNotFoundException
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
@@ -46,8 +45,8 @@ def isNice_2(word):
     if not repeated:
         return False
     for i in range(n):
-        pair = word[i : i + 2]
-        if pair in word[i + 2 :]:
+        pair = word[i: i + 2]
+        if pair in word[i + 2:]:
             return True
 
     return False

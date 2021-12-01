@@ -1,6 +1,5 @@
-from typing import List
+from typing import List, Dict
 
-from adventofcode.util.exceptions import SolutionNotFoundException
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
@@ -24,19 +23,16 @@ class Sue:
 
 @solution_timer(2015, 16, 1)
 def part_one(input_data: List[str]):
-    sues = {}
+    sues: Dict[int, Dict[str, int]] = {}
     for line in input_data:
         split = line.split()
-        # print(split)
         number = int(split[1][:-1])
         split = split[2:]
         sues[number] = {}
         for i in range(0, len(split), 2):
-            # print(split[i], split[i + 1].strip(","))
             sues[number][split[i][:-1]] = int(split[i + 1].strip(","))
     for num in sues:
         sue = sues[num]
-        # print(num, sue)
 
         children = sue.get("children", -1)
         cats = sue.get("cats", -1)
@@ -74,7 +70,7 @@ def part_one(input_data: List[str]):
 
 @solution_timer(2015, 16, 2)
 def part_two(input_data: List[str]):
-    sues = {}
+    sues: Dict[int, Dict[str, int]] = {}
     for line in input_data:
         split = line.split()
         # print(split)

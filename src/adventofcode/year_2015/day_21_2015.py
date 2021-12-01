@@ -1,6 +1,5 @@
 from typing import List
 
-from adventofcode.util.exceptions import SolutionNotFoundException
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
@@ -27,12 +26,12 @@ def simFight(player, boss):
 player = stats(8, 5, 5)
 boss = stats(12, 7, 2)
 t1 = simFight(player, boss)
-assert t1 == True
+assert t1 is True
 
 player = stats(100, 6, 0)
 boss = stats(109, 8, 2)
 t2 = simFight(player, boss)
-assert t2 == False
+assert t2 is False
 
 
 def CoinsNeeded(bossStats):

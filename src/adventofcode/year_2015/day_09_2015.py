@@ -1,6 +1,5 @@
 from typing import List
 
-from adventofcode.util.exceptions import SolutionNotFoundException
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
@@ -24,11 +23,8 @@ def part_one(input_data: List[str]):
 
     locations = set(locations)
 
-    # print(path)
-    # print(locations)
     shortest = math.inf
     for perm in permutations(locations):
-        # print(perm)
         permDist = 0
         for c1, c2 in zip(perm[:-1], perm[1:]):
             permDist += path[c1 + c2]
@@ -52,11 +48,8 @@ def part_two(input_data: List[str]):
 
     locations = set(locations)
 
-    # print(path)
-    # print(locations)
     longest = -math.inf
     for perm in permutations(locations):
-        # print(perm)
         permDist = 0
         for c1, c2 in zip(perm[:-1], perm[1:]):
             permDist += path[c1 + c2]

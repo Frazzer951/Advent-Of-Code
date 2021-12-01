@@ -1,6 +1,5 @@
 from typing import List
 
-from adventofcode.util.exceptions import SolutionNotFoundException
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
@@ -9,26 +8,26 @@ from adventofcode.util.input_helpers import get_input_for_day
 def part_one(input_data: List[str]):
     lights = [[False for _ in range(1000)] for _ in range(1000)]
     for line in input_data:
-        line = line.split()
-        if line[0] == "turn":
-            if line[1] == "on":
-                x1, y1 = line[2].split(",")
-                x2, y2 = line[4].split(",")
-                x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+        command = line.split()
+        if command[0] == "turn":
+            if command[1] == "on":
+                p1 = command[2].split(",")
+                p2 = command[4].split(",")
+                x1, y1, x2, y2 = int(p1[0]), int(p1[1]), int(p2[0]), int(p2[1])
                 for i in range(x1, x2 + 1):
                     for j in range(y1, y2 + 1):
                         lights[i][j] = True
-            if line[1] == "off":
-                x1, y1 = line[2].split(",")
-                x2, y2 = line[4].split(",")
-                x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+            if command[1] == "off":
+                p1 = command[2].split(",")
+                p2 = command[4].split(",")
+                x1, y1, x2, y2 = int(p1[0]), int(p1[1]), int(p2[0]), int(p2[1])
                 for i in range(x1, x2 + 1):
                     for j in range(y1, y2 + 1):
                         lights[i][j] = False
-        if line[0] == "toggle":
-            x1, y1 = line[1].split(",")
-            x2, y2 = line[3].split(",")
-            x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+        if command[0] == "toggle":
+            p1 = command[1].split(",")
+            p2 = command[3].split(",")
+            x1, y1, x2, y2 = int(p1[0]), int(p1[1]), int(p2[0]), int(p2[1])
             for i in range(x1, x2 + 1):
                 for j in range(y1, y2 + 1):
                     lights[i][j] = not lights[i][j]
@@ -39,28 +38,28 @@ def part_one(input_data: List[str]):
 def part_two(input_data: List[str]):
     lights = [[0 for _ in range(1000)] for _ in range(1000)]
     for line in input_data:
-        line = line.split()
-        if line[0] == "turn":
-            if line[1] == "on":
-                x1, y1 = line[2].split(",")
-                x2, y2 = line[4].split(",")
-                x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+        command = line.split()
+        if command[0] == "turn":
+            if command[1] == "on":
+                p1 = command[2].split(",")
+                p2 = command[4].split(",")
+                x1, y1, x2, y2 = int(p1[0]), int(p1[1]), int(p2[0]), int(p2[1])
                 for i in range(x1, x2 + 1):
                     for j in range(y1, y2 + 1):
                         lights[i][j] += 1
-            if line[1] == "off":
-                x1, y1 = line[2].split(",")
-                x2, y2 = line[4].split(",")
-                x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+            if command[1] == "off":
+                p1 = command[2].split(",")
+                p2 = command[4].split(",")
+                x1, y1, x2, y2 = int(p1[0]), int(p1[1]), int(p2[0]), int(p2[1])
                 for i in range(x1, x2 + 1):
                     for j in range(y1, y2 + 1):
                         lights[i][j] -= 1
                         if lights[i][j] < 0:
                             lights[i][j] = 0
-        if line[0] == "toggle":
-            x1, y1 = line[1].split(",")
-            x2, y2 = line[3].split(",")
-            x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+        if command[0] == "toggle":
+            p1 = command[1].split(",")
+            p2 = command[3].split(",")
+            x1, y1, x2, y2 = int(p1[0]), int(p1[1]), int(p2[0]), int(p2[1])
             for i in range(x1, x2 + 1):
                 for j in range(y1, y2 + 1):
                     lights[i][j] += 2

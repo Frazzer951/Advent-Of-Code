@@ -1,6 +1,5 @@
 from typing import List
 
-from adventofcode.util.exceptions import SolutionNotFoundException
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
@@ -71,14 +70,15 @@ def part_two(input_data: List[str], seconds: int = 2503):
     scores = [0] * len(distances)
 
     for i in range(seconds):
-        maxDist = [0, []]
+        maxDist = 0
+        raindeers = []
         for j in range(len(distances)):
-            if distances[j][i] > maxDist[0]:
-                maxDist[0] = distances[j][i]
-                maxDist[1] = [j]
-            elif distances[j][i] == maxDist[0]:
-                maxDist[1].append(j)
-        addPoints = set(maxDist[1])
+            if distances[j][i] > maxDist:
+                maxDist = distances[j][i]
+                raindeers = [j]
+            elif distances[j][i] == maxDist:
+                raindeers.append(j)
+        addPoints = set(raindeers)
         for num in addPoints:
             scores[num] += 1
 

@@ -1,6 +1,5 @@
-from typing import List
+from typing import List, Dict
 
-from adventofcode.util.exceptions import SolutionNotFoundException
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
@@ -24,7 +23,7 @@ def get_happiness(person1, person2):
 
 @solution_timer(2015, 13, 1)
 def part_one(input_data: List[str]):
-    people = dict()
+    people: Dict[str, Person] = dict()
 
     for line in input_data:
         split_line = line.split()
