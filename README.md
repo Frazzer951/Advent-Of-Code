@@ -1,6 +1,6 @@
 # Advent of Code ⭐️
 
-[![Stars collected](https://shields.io/static/v1?label=stars%20collected&message=0&color=yellow)]()
+[![Stars collected](https://shields.io/static/v1?label=stars%20collected&message=2&color=yellow)]()
 [![codecov](https://codecov.io/gh/Frazzer951/Advent-Of-Code/branch/master/graph/badge.svg?token=I6SVGU2U3R)](https://codecov.io/gh/Frazzer951/Advent-Of-Code)
 [![tests](https://github.com/Frazzer951/Advent-Of-Code/actions/workflows/tests.yaml/badge.svg)](https://github.com/Frazzer951/Advent-Of-Code)
 
@@ -9,5 +9,7 @@ Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/ad
 
 <!-- start completed section -->
 ## Completed ⭐️
+### 2015
+- day 01: part one ⭐️, part two ⭐️
 
 <!-- end completed section -->
