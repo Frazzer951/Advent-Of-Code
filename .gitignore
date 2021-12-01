@@ -131,4 +131,6 @@ dmypy.json
 # PyCharm
 .idea
 
+# Custom
 .session
+.vscode/
