@@ -45,7 +45,7 @@ class Wire:
 
 
 @solution_timer(2015, 7, 1)
-def part_one(input_data: List[str]):
+def part_one(input_data: List[str], all_signals: bool = False):
     wires = [Wire(line) for line in input_data]
 
     signals = {}
@@ -59,11 +59,13 @@ def part_one(input_data: List[str]):
                 wire.fillInputs(signals)
                 newWires.append(wire)
         localWires = newWires
-    return signals
+    if all_signals:
+        return signals
+    return signals["a"]
 
 
 @solution_timer(2015, 7, 2)
-def part_two(input_data: List[str]):
+def part_two(input_data: List[str], all_signals: bool = False):
     wires = [Wire(line) for line in input_data]
     wires = [wire for wire in wires if wire.output != "b"]
 
@@ -78,7 +80,9 @@ def part_two(input_data: List[str]):
                 wire.fillInputs(signals)
                 newWires.append(wire)
         localWires = newWires
-    return signals
+    if all_signals:
+        return signals
+    return signals["a"]
 
 
 if __name__ == "__main__":

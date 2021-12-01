@@ -28,9 +28,9 @@ def test_part_one(line, expected):
                 "London to Belfast = 518",
                 "Dublin to Belfast = 141",
             ],
-            804,
+            982,
         )
     ],
 )
 def test_part_two(line, expected):
-    assert expected == part_two([line])
+    assert expected == part_two(line)

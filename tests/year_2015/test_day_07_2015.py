@@ -30,4 +30,4 @@ from adventofcode.year_2015.day_07_2015 import part_one
     ],
 )
 def test_part_one(line, expected):
-    assert expected == part_one(line)
+    assert expected == part_one(line, True)

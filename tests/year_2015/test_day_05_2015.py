@@ -13,7 +13,7 @@ from adventofcode.year_2015.day_05_2015 import isNice_1, isNice_2
     ],
 )
 def test_isNice_one(line, expected):
-    assert expected == isNice_1([line])
+    assert expected == isNice_1(line)
 
 
 @pytest.mark.parametrize(
@@ -26,4 +26,4 @@ def test_isNice_one(line, expected):
     ],
 )
 def test_isNice_two(line, expected):
-    assert expected == isNice_2([line])
+    assert expected == isNice_2(line)
