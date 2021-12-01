@@ -1,6 +1,6 @@
 # Advent of Code ⭐️
 
-[![Stars collected](https://shields.io/static/v1?label=stars%20collected&message=70&color=yellow)](https://github.com/Frazzer951/Advent-Of-Code)
+[![Stars collected](https://shields.io/static/v1?label=stars%20collected&message=80&color=yellow)](https://github.com/Frazzer951/Advent-Of-Code)
 [![codecov](https://codecov.io/gh/Frazzer951/Advent-Of-Code/branch/master/graph/badge.svg?token=I6SVGU2U3R)](https://codecov.io/gh/Frazzer951/Advent-Of-Code)
 [![tests](https://github.com/Frazzer951/Advent-Of-Code/actions/workflows/tests.yaml/badge.svg)](https://github.com/Frazzer951/Advent-Of-Code)
 
@@ -45,6 +45,12 @@ Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/ad
 - day 07: part one ⭐️, part two ⭐️
 - day 08: part one ⭐️, part two ⭐️
 - day 09: part one ⭐️, part two ⭐️
+### 2020
+- day 01: part one ⭐️, part two ⭐️
+- day 02: part one ⭐️, part two ⭐️
+- day 03: part one ⭐️, part two ⭐️
+- day 04: part one ⭐️, part two ⭐️
+- day 05: part one ⭐️, part two ⭐️
 ### 2021
 - day 01: part one ⭐️, part two ⭐️
 
