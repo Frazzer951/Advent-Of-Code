@@ -1,6 +1,6 @@
 # Advent of Code ⭐️
 
-[![Stars collected](https://shields.io/static/v1?label=stars%20collected&message=52&color=yellow)]()
+[![Stars collected](https://shields.io/static/v1?label=stars%20collected&message=52&color=yellow)](https://github.com/Frazzer951/Advent-Of-Code)
 [![codecov](https://codecov.io/gh/Frazzer951/Advent-Of-Code/branch/master/graph/badge.svg?token=I6SVGU2U3R)](https://codecov.io/gh/Frazzer951/Advent-Of-Code)
 [![tests](https://github.com/Frazzer951/Advent-Of-Code/actions/workflows/tests.yaml/badge.svg)](https://github.com/Frazzer951/Advent-Of-Code)
 
