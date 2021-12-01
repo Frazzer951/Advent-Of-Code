@@ -44,13 +44,15 @@ def day_exists(year: int, day: int) -> bool:
 def verify_test_exists(year: int, day: int) -> None:
     module_path = os.path.join(ROOT_DIR, "..", "..", "tests", f"year_{year}")
     filename = os.path.join(module_path, f"test_day_{day:02}_{year}.py")
+    create_dir(module_path)
     if os.path.isfile(filename):
         console.print(
             f"Test file already exists for year {year} day {day}, skipping creation"
         )
-        return
-    write_template(filename, read_template(year, day, True))
-    console.print(f"Wrote test template to {filename}")
+        console.print(f"{filename}")
+    else:
+        write_template(filename, read_template(year, day, True))
+        console.print(f"Wrote test template to {filename}")
 
 
 def verify_input_exists(year: int, day: int) -> None:

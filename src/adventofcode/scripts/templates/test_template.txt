@@ -6,11 +6,11 @@ from adventofcode.year_{year}.day_{day:02}_{year} import part_one, part_two
     ["line", "expected"], [("","")]
 )
 def test_part_one(line, expected):
-    assert expected == part_one([line])
+    assert expected == part_one(line)
 
 
 @pytest.mark.parametrize(
     ["line", "expected"], [("","")]
 )
 def test_part_two(line, expected):
-    assert expected == part_two([line])
+    assert expected == part_two(line)
