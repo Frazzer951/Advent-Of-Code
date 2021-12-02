@@ -6,11 +6,7 @@ from adventofcode.util.input_helpers import get_input_for_day
 
 def is_abba_sequence(sequence):
     for i in range(len(sequence) - 3):
-        if (
-            sequence[i] == sequence[i + 3]
-            and sequence[i + 1] == sequence[i + 2]
-            and sequence[i] != sequence[i + 1]
-        ):
+        if sequence[i] == sequence[i + 3] and sequence[i + 1] == sequence[i + 2] and sequence[i] != sequence[i + 1]:
             return True
     return False
 

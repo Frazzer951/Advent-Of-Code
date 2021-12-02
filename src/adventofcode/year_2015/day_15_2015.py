@@ -23,12 +23,7 @@ class Recipe:
         self.calories = 0
 
     def get_score(self):
-        return (
-            max(self.capacity, 0)
-            * max(self.durability, 0)
-            * max(self.flavor, 0)
-            * max(self.texture, 0)
-        )
+        return max(self.capacity, 0) * max(self.durability, 0) * max(self.flavor, 0) * max(self.texture, 0)
 
     def add_ingredient(self, ingredient, amount=1):
         self.capacity += ingredient.capacity * amount
@@ -45,9 +40,7 @@ def multichoose(n, k):
         return []
     if n == 1:
         return [[k]]
-    return [[0] + val for val in multichoose(n - 1, k)] + [
-        [val[0] + 1] + val[1:] for val in multichoose(n, k - 1)
-    ]
+    return [[0] + val for val in multichoose(n - 1, k)] + [[val[0] + 1] + val[1:] for val in multichoose(n, k - 1)]
 
 
 @solution_timer(2015, 15, 1)

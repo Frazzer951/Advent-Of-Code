@@ -8,7 +8,7 @@ from adventofcode.util.input_helpers import get_input_for_day
 def print_screen(screen):
     print("-" * (len(screen[0])))
     for row in screen:
-        print(''.join('#' if x == '#' else ' ' for x in row))
+        print("".join("#" if x == "#" else " " for x in row))
     print("-" * (len(screen[0])))
 
 

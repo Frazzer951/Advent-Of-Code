@@ -9,8 +9,8 @@ from adventofcode.util.input_helpers import get_input_for_day
 def part_one(input_data: List[str]):
     input_data = [int(x) for x in input_data]
     for num in input_data:
-        if 2020-num in input_data:
-            return num * (2020-num)
+        if 2020 - num in input_data:
+            return num * (2020 - num)
 
     raise SolutionNotFoundException(2020, 1, 1)
 
@@ -21,8 +21,8 @@ def part_two(input_data: List[str]):
 
     for num1 in input_data:
         for num2 in input_data:
-            if 2020-num1-num2 in input_data:
-                return num1 * num2 * (2020-num1-num2)
+            if 2020 - num1 - num2 in input_data:
+                return num1 * num2 * (2020 - num1 - num2)
 
     raise SolutionNotFoundException(2020, 1, 2)
 

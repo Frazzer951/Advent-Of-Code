@@ -5,9 +5,9 @@ from adventofcode.util.input_helpers import get_input_for_day
 
 
 def is_valid_password_1(password: str) -> bool:
-    rule, password = password.split(': ')
-    range, letter = rule.split(' ')
-    lower, upper = range.split('-')
+    rule, password = password.split(": ")
+    range, letter = rule.split(" ")
+    lower, upper = range.split("-")
     lower, upper = int(lower), int(upper)
     if lower <= password.count(letter) <= upper:
         return True
@@ -15,11 +15,13 @@ def is_valid_password_1(password: str) -> bool:
 
 
 def is_valid_password_2(password: str) -> bool:
-    rule, password = password.split(': ')
-    range, letter = rule.split(' ')
-    index_1, index_2 = range.split('-')
+    rule, password = password.split(": ")
+    range, letter = rule.split(" ")
+    index_1, index_2 = range.split("-")
     index_1, index_2 = int(index_1), int(index_2)
-    if (password[index_1 - 1] == letter and password[index_2 - 1] != letter) or (password[index_1 - 1] != letter and password[index_2 - 1] == letter):
+    if (password[index_1 - 1] == letter and password[index_2 - 1] != letter) or (
+        password[index_1 - 1] != letter and password[index_2 - 1] == letter
+    ):
         return True
     return False
 

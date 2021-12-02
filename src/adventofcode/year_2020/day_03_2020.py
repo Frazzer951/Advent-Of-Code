@@ -23,11 +23,13 @@ def part_one(input_data: List[str]):
 
 @solution_timer(2020, 3, 2)
 def part_two(input_data: List[str]):
-    return check_slope(1, 1, input_data) * \
-        check_slope(3, 1, input_data) * \
-        check_slope(5, 1, input_data) * \
-        check_slope(7, 1, input_data) * \
-        check_slope(1, 2, input_data)
+    return (
+        check_slope(1, 1, input_data)
+        * check_slope(3, 1, input_data)
+        * check_slope(5, 1, input_data)
+        * check_slope(7, 1, input_data)
+        * check_slope(1, 2, input_data)
+    )
 
 
 if __name__ == "__main__":

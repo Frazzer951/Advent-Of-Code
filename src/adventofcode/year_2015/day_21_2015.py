@@ -70,12 +70,7 @@ def CoinsNeeded(bossStats):
                     if ring1 == ring2 and ring1 != "None":
                         continue
                     # Simulate fight
-                    cost = (
-                        weapons[weapon][0]
-                        + armors[armor][0]
-                        + rings[ring1][0]
-                        + rings[ring2][0]
-                    )
+                    cost = weapons[weapon][0] + armors[armor][0] + rings[ring1][0] + rings[ring2][0]
                     player = stats(
                         100,
                         weapons[weapon][1] + rings[ring1][1] + rings[ring2][1],

@@ -58,9 +58,7 @@ def check_for_endgame(game, min_mana_spent):
 
 
 def try_all_spells(game, min_mana_spent, new_games):
-    castable_spells = [
-        spell for spell, cost in SPELL_COSTS.items() if cost <= game["player_mana"]
-    ]
+    castable_spells = [spell for spell, cost in SPELL_COSTS.items() if cost <= game["player_mana"]]
     if game["shield_timer"] and "shield" in castable_spells:
         castable_spells.remove("shield")
     if game["poison_timer"] and "poison" in castable_spells:

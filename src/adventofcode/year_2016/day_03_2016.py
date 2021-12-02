@@ -10,11 +10,7 @@ def part_one(input_data: List[str]):
     for line in input_data:
         nums = line.strip().split(" ")
         nums = [int(x) for x in nums if x != ""]
-        if (
-            nums[0] + nums[1] > nums[2]
-            and nums[1] + nums[2] > nums[0]
-            and nums[0] + nums[2] > nums[1]
-        ):
+        if nums[0] + nums[1] > nums[2] and nums[1] + nums[2] > nums[0] and nums[0] + nums[2] > nums[1]:
             valid_triangles += 1
     return valid_triangles
 

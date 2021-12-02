@@ -3,14 +3,20 @@ import re
 from typing import Dict
 
 from adventofcode.config import ROOT_DIR
-from adventofcode.util.module_helpers import get_functions_from_day_file, get_full_day_paths, get_full_year_paths, clean_day, clean_year
+from adventofcode.util.module_helpers import (
+    get_functions_from_day_file,
+    get_full_day_paths,
+    get_full_year_paths,
+    clean_day,
+    clean_year,
+)
 
 
 YearDayType = Dict[int, Dict[int, Dict[str, bool]]]
 
 
 def generate_readme():
-    path = os.path.join(ROOT_DIR, '../../README.md')
+    path = os.path.join(ROOT_DIR, "../../README.md")
     readme_file = os.path.abspath(path)
 
     with open(readme_file) as f:
@@ -19,21 +25,21 @@ def generate_readme():
     readme = _replace_between_tags(
         current_readme,
         _create_completed_text(),
-        '<!-- start completed section -->',
-        '<!-- end completed section -->'
+        "<!-- start completed section -->",
+        "<!-- end completed section -->",
     )
 
     readme = _update_stars(readme)
 
-    with open(readme_file, 'w') as f:
+    with open(readme_file, "w") as f:
         f.write(readme)
 
 
 def _replace_between_tags(readme: str, content: str, start: str, end: str) -> str:
-    content = '\n'.join([start, content, end])
+    content = "\n".join([start, content, end])
 
     return re.sub(
-        pattern=rf'{start}.*?{end}',
+        pattern=rf"{start}.*?{end}",
         repl=content,
         string=readme,
         flags=re.DOTALL,
@@ -44,8 +50,8 @@ def _update_stars(readme: str) -> str:
     star_count = _count_stars()
 
     return re.sub(
-        pattern=r'&message=\d+',
-        repl=f'&message={star_count}',
+        pattern=r"&message=\d+",
+        repl=f"&message={star_count}",
         string=readme,
         flags=re.DOTALL,
     )
@@ -59,17 +65,17 @@ def _count_stars() -> int:
 def _create_completed_text() -> str:
     found = _find_completed_days()
 
-    text = ['## Completed ⭐️']
+    text = ["## Completed ⭐️"]
     for year, days in found.items():
-        text.append(f'### {year}')
+        text.append(f"### {year}")
 
         for day, parts in days.items():
-            part_one = '⭐️' if parts['part_one'] else '–'
-            part_two = '⭐️' if parts['part_two'] else '–'
-            text.append(f'- day {day:02}: part one {part_one}, part two {part_two}')
+            part_one = "⭐️" if parts["part_one"] else "–"
+            part_two = "⭐️" if parts["part_two"] else "–"
+            text.append(f"- day {day:02}: part one {part_one}, part two {part_two}")
 
-    text.append('')
-    return '\n'.join(text)
+    text.append("")
+    return "\n".join(text)
 
 
 def _find_completed_days() -> YearDayType:
@@ -90,7 +96,7 @@ def _find_completed_days() -> YearDayType:
             items[year][day] = {}
             funcs = get_functions_from_day_file(day_file)
 
-            items[year][day]['part_one'] = 'part_one' in funcs
-            items[year][day]['part_two'] = 'part_two' in funcs
+            items[year][day]["part_one"] = "part_one" in funcs
+            items[year][day]["part_two"] = "part_two" in funcs
 
     return items

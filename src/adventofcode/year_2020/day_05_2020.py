@@ -14,12 +14,12 @@ def get_seat_from_code(seat_code: str):
     col_code = seat_code[7:]
 
     for c in row_code:
-        if c == 'F':
+        if c == "F":
             row_upper = (row_upper + row_lower) // 2
         else:
             row_lower = (row_upper + row_lower) // 2 + 1
     for c in col_code:
-        if c == 'L':
+        if c == "L":
             column_upper = (column_upper + column_lower) // 2
         else:
             column_lower = (column_upper + column_lower) // 2 + 1

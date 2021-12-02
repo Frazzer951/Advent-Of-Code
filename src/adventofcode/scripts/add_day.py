@@ -35,9 +35,7 @@ def day_exists(year: int, day: int) -> bool:
     filename = os.path.join(module_path, f"day_{day:02}_{year}.py")
     exists = os.path.isfile(filename)
     if exists:
-        console.print(
-            f"Code file already exists for year {year} day {day}, skipping creation"
-        )
+        console.print(f"Code file already exists for year {year} day {day}, skipping creation")
     return exists
 
 
@@ -46,9 +44,7 @@ def verify_test_exists(year: int, day: int) -> None:
     filename = os.path.join(module_path, f"test_day_{day:02}_{year}.py")
     create_dir(module_path)
     if os.path.isfile(filename):
-        console.print(
-            f"Test file already exists for year {year} day {day}, skipping creation"
-        )
+        console.print(f"Test file already exists for year {year} day {day}, skipping creation")
         console.print(f"{filename}")
     else:
         write_template(filename, read_template(year, day, True))
@@ -58,25 +54,17 @@ def verify_test_exists(year: int, day: int) -> None:
 def verify_input_exists(year: int, day: int) -> None:
     try:
         _ = get_input_for_day(year, day)
-        console.print(
-            f"Input data already exists for year {year} day {day}, skipping download"
-        )
+        console.print(f"Input data already exists for year {year} day {day}, skipping download")
         return
     except FileNotFoundError:
         try:
             get_input(year, day)
-            console.print(
-                f"Automatically downloaded input data for year {year} day {day}"
-            )
+            console.print(f"Automatically downloaded input data for year {year} day {day}")
             return
         except HTTPError as e:
-            console.print(
-                f"[red]Could not retrieve input data for year {year} day {day} automatically: {e}"
-            )
+            console.print(f"[red]Could not retrieve input data for year {year} day {day} automatically: {e}")
         except FileNotFoundError:
-            console.print(
-                f"[red]Could not retrieve input data for year {year} day {day}: .session not set correctly"
-            )
+            console.print(f"[red]Could not retrieve input data for year {year} day {day}: .session not set correctly")
 
     raise ValueError("unknown exception occurred in verify_input_exists")
 
