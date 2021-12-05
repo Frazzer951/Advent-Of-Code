@@ -1,4 +1,3 @@
-import pytest
 from adventofcode.year_2021.day_04_2021 import part_one, part_two, parse_boards
 
 
