@@ -1,16 +1,13 @@
-import pytest
-from adventofcode.year_2015.day_23_2015 import part_one, part_two
+from adventofcode.year_2015.day_23_2015 import sim_code
 
 
-@pytest.mark.parametrize(
-    ["line", "expected"], [("","")]
-)
-def test_part_one(line, expected):
-    assert expected == part_one(line)
-
-
-@pytest.mark.parametrize(
-    ["line", "expected"], [("","")]
-)
-def test_part_two(line, expected):
-    assert expected == part_two(line)
+def test_part_one():
+    t1 = sim_code(
+        [
+            "inc a",
+            "jio a, +2",
+            "tpl a",
+            "inc a  ",
+        ]
+    )
+    assert t1["a"] == 2

@@ -1,16 +1,49 @@
-import pytest
-from adventofcode.year_2015.day_18_2015 import part_one, part_two
+from adventofcode.year_2015.day_18_2015 import iterateBoard, iterateBoard2
 
 
-@pytest.mark.parametrize(
-    ["line", "expected"], [("","")]
-)
-def test_part_one(line, expected):
-    assert expected == part_one(line)
+def test_part_one():
+    t1 = iterateBoard(
+        [
+            [".", "#", ".", "#", ".", "#"],
+            [".", ".", ".", "#", "#", "."],
+            ["#", ".", ".", ".", ".", "#"],
+            [".", ".", "#", ".", ".", "."],
+            ["#", ".", "#", ".", ".", "#"],
+            ["#", "#", "#", "#", ".", "."],
+        ],
+        4,
+    )
+    count = sum([lst.count("#") for lst in t1])
+    assert t1 == [
+        [".", ".", ".", ".", ".", "."],
+        [".", ".", ".", ".", ".", "."],
+        [".", ".", "#", "#", ".", "."],
+        [".", ".", "#", "#", ".", "."],
+        [".", ".", ".", ".", ".", "."],
+        [".", ".", ".", ".", ".", "."],
+    ]
+    assert count == 4
 
 
-@pytest.mark.parametrize(
-    ["line", "expected"], [("","")]
-)
-def test_part_two(line, expected):
-    assert expected == part_two(line)
+def test_part_two():
+    t3 = iterateBoard2(
+        [
+            ["#", "#", ".", "#", ".", "#"],
+            [".", ".", ".", "#", "#", "."],
+            ["#", ".", ".", ".", ".", "#"],
+            [".", ".", "#", ".", ".", "."],
+            ["#", ".", "#", ".", ".", "#"],
+            ["#", "#", "#", "#", ".", "#"],
+        ],
+        5,
+    )
+    count = sum([lst.count("#") for lst in t3])
+    assert t3 == [
+        ["#", "#", ".", "#", "#", "#"],
+        [".", "#", "#", ".", ".", "#"],
+        [".", "#", "#", ".", ".", "."],
+        [".", "#", "#", ".", ".", "."],
+        ["#", ".", "#", ".", ".", "."],
+        ["#", "#", ".", ".", ".", "#"],
+    ]
+    assert count == 17

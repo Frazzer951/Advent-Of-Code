@@ -1,16 +1,11 @@
-import pytest
-from adventofcode.year_2015.day_24_2015 import part_one, part_two
+from adventofcode.year_2015.day_24_2015 import splitPresents
 
 
-@pytest.mark.parametrize(
-    ["line", "expected"], [("","")]
-)
-def test_part_one(line, expected):
-    assert expected == part_one(line)
+def test_part_one():
+    t1 = splitPresents([1, 2, 3, 4, 5, 7, 8, 9, 10, 11], 3)
+    assert t1 == 99
 
 
-@pytest.mark.parametrize(
-    ["line", "expected"], [("","")]
-)
-def test_part_two(line, expected):
-    assert expected == part_two(line)
+def test_part_two():
+    t3 = splitPresents([1, 2, 3, 4, 5, 7, 8, 9, 10, 11], 4)
+    assert t3 == 44

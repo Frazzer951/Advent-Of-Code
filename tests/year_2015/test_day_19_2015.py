@@ -1,16 +1,10 @@
 import pytest
-from adventofcode.year_2015.day_19_2015 import part_one, part_two
+from adventofcode.year_2015.day_19_2015 import numReplacements
 
 
 @pytest.mark.parametrize(
-    ["line", "expected"], [("","")]
+    ["replacements", "molecule", "expected"],
+    [({"H": ["HO", "OH"], "O": ["HH"]}, "HOH", 4), ({"H": ["HO", "OH"], "O": ["HH"]}, "HOHOHO", 7)],
 )
-def test_part_one(line, expected):
-    assert expected == part_one(line)
-
-
-@pytest.mark.parametrize(
-    ["line", "expected"], [("","")]
-)
-def test_part_two(line, expected):
-    assert expected == part_two(line)
+def test_part_one(replacements, molecule, expected):
+    assert expected == numReplacements(replacements, molecule)

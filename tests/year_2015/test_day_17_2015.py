@@ -1,11 +1,9 @@
-import pytest
-from adventofcode.year_2015.day_17_2015 import find_combinations, part_two
+from adventofcode.year_2015.day_17_2015 import find_combinations, find_different_ways
 
 
 def test_part_one():
-    assert 150 == find_combinations(["20", "15", "10", "5", "5"], 25)
+    assert 4 == find_combinations(["20", "15", "10", "5", "5"], 25)
 
 
-@pytest.mark.parametrize(["line", "expected"], [("", "")])
-def test_part_two(line, expected):
-    assert expected == part_two(line)
+def test_part_two():
+    assert 3 == find_different_ways(["20", "15", "10", "5", "5"], 25)
