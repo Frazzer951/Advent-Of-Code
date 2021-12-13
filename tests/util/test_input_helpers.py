@@ -1,3 +1,5 @@
+# type: ignore
+
 import pytest
 import pytest_mock
 
