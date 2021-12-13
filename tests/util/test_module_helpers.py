@@ -77,22 +77,10 @@ def test_year_dir_from_path(path, expected):
 @pytest.mark.parametrize(
     ["path", "expected"],
     [
-        (
-            "/Users/marcelblijleven/project/year_2015/day_01_2015.py",
-            "adventofcode.year_2015.day_01_2015",
-        ),
-        (
-            "/Users/marcelblijleven/project/year_2016/day_02_2016.py",
-            "adventofcode.year_2016.day_02_2016",
-        ),
-        (
-            "/Users/marcelblijleven/project/year_2017/day_10_2017.py",
-            "adventofcode.year_2017.day_10_2017",
-        ),
-        (
-            "/Users/marcelblijleven/project/year_2018/day_25_2018.py",
-            "adventofcode.year_2018.day_25_2018",
-        ),
+        ("/Users/marcelblijleven/project/year_2015/day_01_2015.py", "adventofcode.year_2015.day_01_2015"),
+        ("/Users/marcelblijleven/project/year_2016/day_02_2016.py", "adventofcode.year_2016.day_02_2016"),
+        ("/Users/marcelblijleven/project/year_2017/day_10_2017.py", "adventofcode.year_2017.day_10_2017"),
+        ("/Users/marcelblijleven/project/year_2018/day_25_2018.py", "adventofcode.year_2018.day_25_2018"),
     ],
 )
 def test_get_full_module_from_day_file(expected, path):

@@ -1,5 +1,5 @@
 import pytest
-from adventofcode.year_{year}.day_{day:02}_{year} import part_one, part_two
+from adventofcode.year_{year}.day_{file_day}_{year} import part_one, part_two
 
 
 @pytest.mark.parametrize(

@@ -4,7 +4,7 @@ import pstats
 import time
 from typing import Callable, Literal, Dict, Any
 
-from adventofcode.config import RUNNING_ALL
+from adventofcode.config import RUNNING_ALL, RUNNING_BENCHMARKS
 from adventofcode.util.console import console
 from adventofcode.util.exceptions import SolutionNotFoundException
 
@@ -54,13 +54,18 @@ def solution_timer(year: int, day: int, part: int, version: str = ""):  # noqa: 
                 if solution is None:
                     raise SolutionNotFoundException(year, day, part)
 
-                diff = time.perf_counter() - start
-                console.print(f"{prefix}{solution} in {diff:.4f} s")
+                diff = (time.perf_counter() - start) * 1000
+
+                if not RUNNING_BENCHMARKS:
+                    console.print(f"{prefix}{solution} in {diff:.2f} ms")
             except (ValueError, ArithmeticError, TypeError):
                 console.print_exception()
             except SolutionNotFoundException:
                 console.print(f"{prefix}[red]solution not found")
             else:
+                if RUNNING_BENCHMARKS:
+                    return diff
+
                 return solution
 
         return wrapper
@@ -69,19 +74,14 @@ def solution_timer(year: int, day: int, part: int, version: str = ""):  # noqa: 
 
 
 def solution_profiler(
-    year: int,
-    day: int,
-    part: int,
-    version: str = "",
-    stats_amount: int = 10,
-    sort: Literal["time", "cumulative"] = "time",
+    year: int, day: int, part: int, version: str = "", stats_amount: int = 10, sort: Literal["time", "cumulative"] = "time"
 ):  # noqa: C901, type: ignore
     prefix = _get_prefix(year, day, part, version)
 
     def decorator(func: Callable):  # type: ignore
         def wrapper(*args, **kwargs):
             with cProfile.Profile() as profiler:
-                func(*args, **kwargs)
+                solution = func(*args, **kwargs)
 
             stats = pstats.Stats(profiler)
 
@@ -95,6 +95,7 @@ def solution_profiler(
             stats.sort_stats(pstats.SortKey.TIME)
             console.print(f"{prefix} profiling")
             stats.print_stats(stats_amount)
+            return solution
 
         return wrapper
 

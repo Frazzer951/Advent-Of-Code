@@ -15,12 +15,7 @@ def clean_repo():
 
 def _parser(args: List[str]) -> bool:
     parser = argparse.ArgumentParser(description="Clean repository")
-    parser.add_argument(
-        "--dry-run",
-        type=str,
-        default="true",
-        help="Specify if it should be run as dry run. Default is True",
-    )
+    parser.add_argument("--dry-run", type=str, default="true", help="Specify if it should be run as dry run. Default is True")
     parsed = parser.parse_args(args)
     return parsed.dry_run != "false"  # type: ignore
 

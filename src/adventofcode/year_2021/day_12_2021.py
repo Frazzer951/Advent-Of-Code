@@ -1,10 +1,10 @@
-from typing import List, Dict
+from typing import List, Dict, Set
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
 
-def pathfinder_1(nodes: Dict[str, set[str]], node: str, history: list[str]):
+def pathfinder_1(nodes: Dict[str, Set[str]], node: str, history: List[str]):
     results = []
     new_history = history + [node]
     if node == "end":
@@ -16,7 +16,7 @@ def pathfinder_1(nodes: Dict[str, set[str]], node: str, history: list[str]):
     return results
 
 
-def pathfinder_2(nodes: Dict[str, set[str]], node: str, history: list[str]):
+def pathfinder_2(nodes: Dict[str, Set[str]], node: str, history: List[str]):
     results = []
     new_history = history + [node]
     if node == "end":
@@ -41,7 +41,7 @@ def pathfinder_2(nodes: Dict[str, set[str]], node: str, history: list[str]):
 
 @solution_timer(2021, 12, 1)
 def part_one(input_data: List[str]):
-    nodes: Dict[str, set[str]] = {}
+    nodes: Dict[str, Set[str]] = {}
     for line in input_data:
         n1, n2 = line.strip().split("-")
         if n1 in nodes:
@@ -58,7 +58,7 @@ def part_one(input_data: List[str]):
 
 @solution_timer(2021, 12, 2)
 def part_two(input_data: List[str]):
-    nodes: Dict[str, set[str]] = {}
+    nodes: Dict[str, Set[str]] = {}
     for line in input_data:
         n1, n2 = line.strip().split("-")
         if n1 in nodes:
