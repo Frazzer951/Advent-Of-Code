@@ -1,6 +1,6 @@
 # Advent of Code ⭐️
 
-[![Stars collected](https://shields.io/static/v1?label=stars%20collected&message=96&color=yellow)](https://github.com/Frazzer951/Advent-Of-Code)
+[![Stars collected](https://shields.io/static/v1?label=stars%20collected&message=102&color=yellow)](https://github.com/Frazzer951/Advent-Of-Code)
 [![tests](https://github.com/Frazzer951/Advent-Of-Code/actions/workflows/tests.yaml/badge.svg)](https://github.com/Frazzer951/Advent-Of-Code)
 
 Collection of my Advent of Code solutions in an overkill project setup 👻🎄.<br>
@@ -60,6 +60,9 @@ Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/ad
 - day 07: part one ⭐️, part two ⭐️
 - day 08: part one ⭐️, part two ⭐️
 - day 09: part one ⭐️, part two ⭐️
+- day 10: part one ⭐️, part two ⭐️
+- day 11: part one ⭐️, part two ⭐️
+- day 12: part one ⭐️, part two ⭐️
 
 <!-- end completed section -->
 
