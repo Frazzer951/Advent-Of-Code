@@ -9,60 +9,96 @@ Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/ad
 <!-- start completed section -->
 ## Completed ⭐️
 ### 2015
-- day 01: part one ⭐️, part two ⭐️
-- day 02: part one ⭐️, part two ⭐️
-- day 03: part one ⭐️, part two ⭐️
-- day 04: part one ⭐️, part two ⭐️
-- day 05: part one ⭐️, part two ⭐️
-- day 06: part one ⭐️, part two ⭐️
-- day 07: part one ⭐️, part two ⭐️
-- day 08: part one ⭐️, part two ⭐️
-- day 09: part one ⭐️, part two ⭐️
-- day 10: part one ⭐️, part two ⭐️
-- day 11: part one ⭐️, part two ⭐️
-- day 12: part one ⭐️, part two ⭐️
-- day 13: part one ⭐️, part two ⭐️
-- day 14: part one ⭐️, part two ⭐️
-- day 15: part one ⭐️, part two ⭐️
-- day 16: part one ⭐️, part two ⭐️
-- day 17: part one ⭐️, part two ⭐️
-- day 18: part one ⭐️, part two ⭐️
-- day 19: part one ⭐️, part two ⭐️
-- day 20: part one ⭐️, part two ⭐️
-- day 21: part one ⭐️, part two ⭐️
-- day 22: part one ⭐️, part two ⭐️
-- day 23: part one ⭐️, part two ⭐️
-- day 24: part one ⭐️, part two ⭐️
-- day 25: part one ⭐️, part two ⭐️
+<details><summary>Solutions for 2015</summary>
+<p>
+
+| day   | part one | part two |
+| :---: | :------: | :------: |
+| 01 | ⭐️ | ⭐️ |
+| 02 | ⭐️ | ⭐️ |
+| 03 | ⭐️ | ⭐️ |
+| 04 | ⭐️ | ⭐️ |
+| 05 | ⭐️ | ⭐️ |
+| 06 | ⭐️ | ⭐️ |
+| 07 | ⭐️ | ⭐️ |
+| 08 | ⭐️ | ⭐️ |
+| 09 | ⭐️ | ⭐️ |
+| 10 | ⭐️ | ⭐️ |
+| 11 | ⭐️ | ⭐️ |
+| 12 | ⭐️ | ⭐️ |
+| 13 | ⭐️ | ⭐️ |
+| 14 | ⭐️ | ⭐️ |
+| 15 | ⭐️ | ⭐️ |
+| 16 | ⭐️ | ⭐️ |
+| 17 | ⭐️ | ⭐️ |
+| 18 | ⭐️ | ⭐️ |
+| 19 | ⭐️ | ⭐️ |
+| 20 | ⭐️ | ⭐️ |
+| 21 | ⭐️ | ⭐️ |
+| 22 | ⭐️ | ⭐️ |
+| 23 | ⭐️ | ⭐️ |
+| 24 | ⭐️ | ⭐️ |
+| 25 | ⭐️ | ⭐️ |
+
+</p>
+</details>
+
 ### 2016
-- day 01: part one ⭐️, part two ⭐️
-- day 02: part one ⭐️, part two ⭐️
-- day 03: part one ⭐️, part two ⭐️
-- day 04: part one ⭐️, part two ⭐️
-- day 05: part one ⭐️, part two ⭐️
-- day 06: part one ⭐️, part two ⭐️
-- day 07: part one ⭐️, part two ⭐️
-- day 08: part one ⭐️, part two ⭐️
-- day 09: part one ⭐️, part two ⭐️
+<details><summary>Solutions for 2016</summary>
+<p>
+
+| day   | part one | part two |
+| :---: | :------: | :------: |
+| 01 | ⭐️ | ⭐️ |
+| 02 | ⭐️ | ⭐️ |
+| 03 | ⭐️ | ⭐️ |
+| 04 | ⭐️ | ⭐️ |
+| 05 | ⭐️ | ⭐️ |
+| 06 | ⭐️ | ⭐️ |
+| 07 | ⭐️ | ⭐️ |
+| 08 | ⭐️ | ⭐️ |
+| 09 | ⭐️ | ⭐️ |
+
+</p>
+</details>
+
 ### 2020
-- day 01: part one ⭐️, part two ⭐️
-- day 02: part one ⭐️, part two ⭐️
-- day 03: part one ⭐️, part two ⭐️
-- day 04: part one ⭐️, part two ⭐️
-- day 05: part one ⭐️, part two ⭐️
+<details><summary>Solutions for 2020</summary>
+<p>
+
+| day   | part one | part two |
+| :---: | :------: | :------: |
+| 01 | ⭐️ | ⭐️ |
+| 02 | ⭐️ | ⭐️ |
+| 03 | ⭐️ | ⭐️ |
+| 04 | ⭐️ | ⭐️ |
+| 05 | ⭐️ | ⭐️ |
+
+</p>
+</details>
+
 ### 2021
-- day 01: part one ⭐️, part two ⭐️
-- day 02: part one ⭐️, part two ⭐️
-- day 03: part one ⭐️, part two ⭐️
-- day 04: part one ⭐️, part two ⭐️
-- day 05: part one ⭐️, part two ⭐️
-- day 06: part one ⭐️, part two ⭐️
-- day 07: part one ⭐️, part two ⭐️
-- day 08: part one ⭐️, part two ⭐️
-- day 09: part one ⭐️, part two ⭐️
-- day 10: part one ⭐️, part two ⭐️
-- day 11: part one ⭐️, part two ⭐️
-- day 12: part one ⭐️, part two ⭐️
+<details><summary>Solutions for 2021</summary>
+<p>
+
+| day   | part one | part two |
+| :---: | :------: | :------: |
+| 01 | ⭐️ | ⭐️ |
+| 02 | ⭐️ | ⭐️ |
+| 03 | ⭐️ | ⭐️ |
+| 04 | ⭐️ | ⭐️ |
+| 05 | ⭐️ | ⭐️ |
+| 06 | ⭐️ | ⭐️ |
+| 07 | ⭐️ | ⭐️ |
+| 08 | ⭐️ | ⭐️ |
+| 09 | ⭐️ | ⭐️ |
+| 10 | ⭐️ | ⭐️ |
+| 11 | ⭐️ | ⭐️ |
+| 12 | ⭐️ | ⭐️ |
+
+</p>
+</details>
+
 
 <!-- end completed section -->
 
