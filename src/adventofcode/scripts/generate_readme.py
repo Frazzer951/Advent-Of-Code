@@ -78,7 +78,7 @@ def _update_year_readme(year: int) -> None:
         f.write("\n".join(text))
 
 
-def _create_year_overview(completed_days: dict[int, dict[str, bool]]) -> List[str]:
+def _create_year_overview(completed_days: Dict[int, Dict[str, bool]]) -> List[str]:
     text: List[str] = ["| day   | part one | part two |", "| :---: | :------: | :------: |"]
 
     for day, parts in completed_days.items():

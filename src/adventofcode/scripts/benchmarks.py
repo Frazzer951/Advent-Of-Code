@@ -1,6 +1,6 @@
 import os
 from concurrent.futures import ProcessPoolExecutor
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 from rich.table import Table
 
@@ -63,8 +63,8 @@ def create_benchmark_text(benchmarks: Benchmarks) -> str:
     return "\n".join(text)
 
 
-def generate_rich_tables(benchmarks: Benchmarks) -> List[tuple[int, Table]]:
-    tables: List[tuple[int, Table]] = []
+def generate_rich_tables(benchmarks: Benchmarks) -> List[Tuple[int, Table]]:
+    tables: List[Tuple[int, Table]] = []
 
     for year, days in benchmarks.items():
         console.print(f"[bold]{year}")
@@ -109,7 +109,7 @@ def write_benchmarks_to_readme(benchmarks: Benchmarks):
         console.print(table)
 
 
-def _retrieve_benchmarks_for_day_mp(day_file: str, year: int) -> dict[int, dict[str, float]]:
+def _retrieve_benchmarks_for_day_mp(day_file: str, year: int) -> Dict[int, dict[str, float]]:
     config.RUNNING_BENCHMARKS = True
     day = clean_day(day_file)
     benchmarks: Dict[int, Dict[str, float]] = {day: {}}
