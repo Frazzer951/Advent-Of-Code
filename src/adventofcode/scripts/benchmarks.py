@@ -109,7 +109,7 @@ def write_benchmarks_to_readme(benchmarks: Benchmarks):
         console.print(table)
 
 
-def _retrieve_benchmarks_for_day_mp(day_file: str, year: int) -> Dict[int, dict[str, float]]:
+def _retrieve_benchmarks_for_day_mp(day_file: str, year: int) -> Dict[int, Dict[str, float]]:
     config.RUNNING_BENCHMARKS = True
     day = clean_day(day_file)
     benchmarks: Dict[int, Dict[str, float]] = {day: {}}
