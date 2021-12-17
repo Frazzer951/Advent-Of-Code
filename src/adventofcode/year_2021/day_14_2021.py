@@ -42,7 +42,7 @@ def insert_elements_smart(pair_count: Dict[str, int], element_count: Dict[str, i
 
 @solution_timer(2021, 14, 2)
 def part_two(input_data: List[str]):
-    polymer = input_data[0]
+    polymer: str = input_data[0]
     input_data = input_data[2:]
     insertions = {}
     for line in input_data:
@@ -52,7 +52,7 @@ def part_two(input_data: List[str]):
     element_count = Counter(polymer)
     pair_count = Counter(dict.fromkeys(insertions.keys(), 0))
     for pair in windowed(polymer, 2):
-        pair_count["".join(pair)] += 1
+        pair_count["".join(pair)] += 1  # type: ignore
     for i in range(40):
         pair_count, element_count = insert_elements_smart(pair_count, element_count, insertions)
     return max(element_count.values()) - min(element_count.values())
