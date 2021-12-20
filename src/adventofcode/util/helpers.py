@@ -2,7 +2,7 @@ import cProfile
 import os
 import pstats
 import time
-from typing import Callable, Literal, Dict, Any
+from typing import Callable, Literal, Dict, Any, List, Tuple
 
 from adventofcode.config import RUNNING_ALL, RUNNING_BENCHMARKS
 from adventofcode.util.console import console
@@ -114,3 +114,23 @@ def memoize(func: Callable):  # type: ignore
         return result
 
     return memoized_func
+
+
+def manhattan_distance(start: Tuple[int, int], end: Tuple[int, int]):
+    x1, y1 = start
+    x2, y2 = end
+    return abs(x1 - x2) + abs(y1 - y2)
+
+
+def grid_to_string(grid: Dict[Tuple[int, int], Any]) -> str:
+    lines: List[str] = []
+    max_x, max_y = max(grid.keys())
+
+    for y in range(max_y + 1):
+        line = ""
+        for x in range(max_x + 1):
+            line += str(grid[(x, y)])
+
+        lines.append(line)
+
+    return "\n".join(lines)

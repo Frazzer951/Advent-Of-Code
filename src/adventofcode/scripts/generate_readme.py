@@ -30,14 +30,16 @@ def generate_readme():
     with open(readme_file, "w") as f:
         f.write(readme)
 
+    _update_stars_in_image()
 
-def _replace_between_tags(readme: str, content: str, start: str, end: str) -> str:
+
+def _replace_between_tags(string: str, content: str, start: str, end: str) -> str:
     content = "\n".join([start, content, end])
 
     return re.sub(
         pattern=rf"{start}.*?{end}",
         repl=content,
-        string=readme,
+        string=string,
         flags=re.DOTALL,
     )
 
@@ -51,6 +53,29 @@ def _update_stars(readme: str) -> str:
         string=readme,
         flags=re.DOTALL,
     )
+
+
+def _update_stars_in_image():
+    star_count = _count_stars()
+    image_dark = os.path.join(ROOT_DIR, "../../image_dark.svg")
+    image_light = os.path.join(ROOT_DIR, "../../image_light.svg")
+    content = f'				<span class="star-count">{star_count}</span>'
+
+    with open(image_dark) as f:
+        svg_content = f.read()
+
+    svg_content = _replace_between_tags(svg_content, content, "<!-- start star count -->", "<!-- end star count -->")
+
+    with open(image_dark, "w") as f:
+        f.write(svg_content)
+
+    with open(image_light) as f:
+        svg_content = f.read()
+
+    svg_content = _replace_between_tags(svg_content, content, "<!-- start star count -->", "<!-- end star count -->")
+
+    with open(image_light, "w") as f:
+        f.write(svg_content)
 
 
 def _count_stars() -> int:
