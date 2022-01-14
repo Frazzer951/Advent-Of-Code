@@ -43,6 +43,7 @@ def clean_day(day_file: str) -> int:
     """
     Removes the 'day_' prefix, _year suffix and .py extension from the day file
     """
+    day_file = os.path.normpath(day_file)
     segments = day_file.split(os.sep)
     day_segment = segments[-1].replace(".py", "")
 
@@ -54,6 +55,7 @@ def year_dir_from_path(year_dir: str) -> str:
     Retrieves the module part from the year directory path
     Example: year_2020
     """
+    year_dir = os.path.normpath(year_dir)
     segments = year_dir.split(os.sep)
     return segments[-1]
 
@@ -63,6 +65,7 @@ def get_full_module_from_day_file(day_file: str) -> str:
     Returns the full module for the given day file
     Example: adventofcode.year_2020.day_01
     """
+    day_file = os.path.normpath(day_file)
     segments = day_file.split(os.sep)
     segments = ["adventofcode"] + segments[-2:]
     module = ".".join(segments).replace(".py", "")
