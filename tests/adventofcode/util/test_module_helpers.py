@@ -19,13 +19,13 @@ def test_get_full_year_paths(mocker: pytest_mock.MockerFixture):
     mocker.patch("adventofcode.util.module_helpers.ROOT_DIR", "root_dir")
     mock_os_list_dir = mocker.patch("adventofcode.util.module_helpers.os.listdir")
     mock_os_list_dir.return_value = ["year_2015", "year_2020", "day_01"]
-    assert ["root_dir\\year_2015", "root_dir\\year_2020"] == get_full_year_paths()
+    assert [os.path.normpath("root_dir/year_2015"), os.path.normpath("root_dir/year_2020")] == get_full_year_paths()
 
 
 def test_get_full_day_paths(mocker: pytest_mock.MockerFixture):
     mock_os_list_dir = mocker.patch("adventofcode.util.module_helpers.os.listdir")
     mock_os_list_dir.return_value = ["day_02", "helper.py", "day_01"]
-    assert ["year_2015\\day_01", "year_2015\\day_02"] == get_full_day_paths("year_2015")
+    assert [os.path.normpath("year_2015/day_01"), os.path.normpath("year_2015/day_02")] == get_full_day_paths("year_2015")
 
 
 def test_get_functions_from_day_file():

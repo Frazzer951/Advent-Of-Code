@@ -62,7 +62,7 @@ def create_dir(path: str) -> None:
 def verify_input_exists(year: int, day: int) -> None:
     try:
         _ = get_input_for_day(year, day)
-        console.print(f"Input data already exists for year {year} day {day}, skipping download")
+        console.print(f"[yellow]Input data already exists for year {year} day {day}, skipping download")
         return
     except FileNotFoundError:
         try:
