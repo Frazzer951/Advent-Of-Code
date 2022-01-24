@@ -134,4 +134,4 @@ dmypy.json
 # Custom
 .session
 .vscode/
-add-days.sh
+add-days.*
