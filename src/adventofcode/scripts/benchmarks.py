@@ -106,14 +106,14 @@ def write_benchmarks_to_readme(benchmarks: Benchmarks):
     path = os.path.join(ROOT_DIR, "../../README.md")
     readme_file = os.path.abspath(path)
 
-    with open(readme_file) as f:
+    with open(readme_file, encoding="UTF-8") as f:
         current_readme = f.read()
 
     readme = _replace_between_tags(
         current_readme, benchmark_text, "<!-- start benchmark section -->", "<!-- end benchmark section -->"
     )
 
-    with open(readme_file, "w") as f:
+    with open(readme_file, "w", encoding="UTF-8") as f:
         f.write(readme)
 
     console.log("generating benchmarks table")
