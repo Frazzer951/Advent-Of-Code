@@ -1,5 +1,5 @@
 # 2016
-Solutions for 9 days in 2016 with a total of 18 stars collected
+Solutions for 10 days in 2016 with a total of 20 stars collected
 
 | day   | part one | part two |
 | :---: | :------: | :------: |
@@ -12,3 +12,4 @@ Solutions for 9 days in 2016 with a total of 18 stars collected
 | 07 | ⭐️ | ⭐️ |
 | 08 | ⭐️ | ⭐️ |
 | 09 | ⭐️ | ⭐️ |
+| 10 | ⭐️ | ⭐️ |
