@@ -1,2 +1,0 @@
-rich>=10.14.0
-more-itertools>=4.2.0
