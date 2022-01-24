@@ -108,6 +108,81 @@ Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/ad
 </details>
 
 
+## Missing ❌
+### 2016
+<details><summary>Missing solutions for 2016</summary>
+<p>
+
+| day   | part one | part two |
+| :---: | :------: | :------: |
+| 11 | ❌ | ❌ |
+| 12 | ❌ | ❌ |
+| 13 | ❌ | ❌ |
+| 14 | ❌ | ❌ |
+| 15 | ❌ | ❌ |
+| 16 | ❌ | ❌ |
+| 17 | ❌ | ❌ |
+| 18 | ❌ | ❌ |
+| 19 | ❌ | ❌ |
+| 20 | ❌ | ❌ |
+| 21 | ❌ | ❌ |
+| 22 | ❌ | ❌ |
+| 23 | ❌ | ❌ |
+| 24 | ❌ | ❌ |
+| 25 | ❌ | – |
+
+</p>
+</details>
+
+### 2020
+<details><summary>Missing solutions for 2020</summary>
+<p>
+
+| day   | part one | part two |
+| :---: | :------: | :------: |
+| 06 | ❌ | ❌ |
+| 07 | ❌ | ❌ |
+| 08 | ❌ | ❌ |
+| 09 | ❌ | ❌ |
+| 10 | ❌ | ❌ |
+| 11 | ❌ | ❌ |
+| 12 | ❌ | ❌ |
+| 13 | ❌ | ❌ |
+| 14 | ❌ | ❌ |
+| 15 | ❌ | ❌ |
+| 16 | ❌ | ❌ |
+| 17 | ❌ | ❌ |
+| 18 | ❌ | ❌ |
+| 19 | ❌ | ❌ |
+| 20 | ❌ | ❌ |
+| 21 | ❌ | ❌ |
+| 22 | ❌ | ❌ |
+| 23 | ❌ | ❌ |
+| 24 | ❌ | ❌ |
+| 25 | ❌ | – |
+
+</p>
+</details>
+
+### 2021
+<details><summary>Missing solutions for 2021</summary>
+<p>
+
+| day   | part one | part two |
+| :---: | :------: | :------: |
+| 17 | ❌ | ❌ |
+| 18 | ❌ | ❌ |
+| 19 | ❌ | ❌ |
+| 20 | ❌ | ❌ |
+| 21 | ❌ | ❌ |
+| 22 | ❌ | ❌ |
+| 23 | ❌ | ❌ |
+| 24 | ❌ | ❌ |
+| 25 | ❌ | – |
+
+</p>
+</details>
+
 <!-- end completed section -->
 
 <!-- start benchmark section -->

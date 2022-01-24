@@ -103,14 +103,24 @@ def _update_year_readme(year: int) -> None:
         f.write("\n")
 
 
-def _create_year_overview(completed_days: Dict[int, Dict[str, bool]]) -> List[str]:
+def _create_year_overview(completed_days: Dict[int, Dict[str, bool]], missing: bool = False) -> List[str]:
     text: List[str] = ["| day   | part one | part two |", "| :---: | :------: | :------: |"]
 
-    for day, parts in completed_days.items():
-        part_one = "⭐️" if parts["part_one"] else "–"
-        part_two = "⭐️" if parts["part_two"] else "–"
-        text.append(f"| {day:02} | {part_one} | {part_two} |")
-
+    if not missing:
+        for day, parts in completed_days.items():
+            part_one = "⭐️" if parts["part_one"] else "–"
+            part_two = "⭐️" if parts["part_two"] else "–"
+            text.append(f"| {day:02} | {part_one} | {part_two} |")
+    else:
+        for i in range(1, 25):
+            if i not in completed_days:
+                text.append(f"| {i:02} | ❌ | ❌ |")
+            elif len(completed_days[i]) != 2:
+                part_one = "❌" if completed_days[i]["part_one"] else "❌"
+                part_two = "❌" if completed_days[i]["part_two"] else "❌"
+                text.append(f"| {i:02} | {part_one} | {part_two} |")
+        if 25 not in completed_days:
+            text.append(f"| {25:02} | ❌ | – |")
     return text
 
 
@@ -131,6 +141,20 @@ def _create_completed_text() -> str:
         text.append("")  # whitespace required
 
     text.append("")
+
+    text.append("## Missing ❌")
+    for year, days in found.items():
+        if len(days) != 25 or any(len(parts) != 2 for parts in days.values()):
+            text.append(f"### {year}")
+            text.append(f"<details><summary>Missing solutions for {year}</summary>")
+            text.append("<p>")
+            text.append("")  # whitespace required
+            text = text + _create_year_overview(days, True)
+            text.append("")  # whitespace required
+            text.append("</p>")
+            text.append("</details>")
+            text.append("")  # whitespace required
+
     return "\n".join(text)
 
 
