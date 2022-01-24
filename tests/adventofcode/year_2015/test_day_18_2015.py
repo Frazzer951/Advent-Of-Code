@@ -1,4 +1,5 @@
-from adventofcode.year_2015.day_18_2015 import iterateBoard, iterateBoard2
+from adventofcode.year_2015.day_18_2015 import iterateBoard
+from adventofcode.year_2015.day_18_2015 import iterateBoard2
 
 
 def test_part_one():
@@ -13,7 +14,7 @@ def test_part_one():
         ],
         4,
     )
-    count = sum([lst.count("#") for lst in t1])
+    count = sum(lst.count("#") for lst in t1)
     assert t1 == [
         [".", ".", ".", ".", ".", "."],
         [".", ".", ".", ".", ".", "."],
@@ -37,7 +38,7 @@ def test_part_two():
         ],
         5,
     )
-    count = sum([lst.count("#") for lst in t3])
+    count = sum(lst.count("#") for lst in t3)
     assert t3 == [
         ["#", "#", ".", "#", "#", "#"],
         [".", "#", "#", ".", ".", "#"],

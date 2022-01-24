@@ -1,9 +1,9 @@
-from typing import List, Dict
+from itertools import permutations
+from typing import Dict
+from typing import List
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-from itertools import permutations
 
 
 class Person:

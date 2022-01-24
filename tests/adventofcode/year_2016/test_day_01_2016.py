@@ -1,5 +1,6 @@
 import pytest
-from adventofcode.year_2016.day_01_2016 import numBlocksAway_1, numBlocksAway_2
+from adventofcode.year_2016.day_01_2016 import numBlocksAway_1
+from adventofcode.year_2016.day_01_2016 import numBlocksAway_2
 
 
 @pytest.mark.parametrize(

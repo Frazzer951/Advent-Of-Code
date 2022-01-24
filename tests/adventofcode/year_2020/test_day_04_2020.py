@@ -1,11 +1,9 @@
 import pytest
-from adventofcode.year_2020.day_04_2020 import (
-    part_one,
-    part_two,
-    parse_passports,
-    verify_passport_1,
-    verify_passport_2,
-)
+from adventofcode.year_2020.day_04_2020 import parse_passports
+from adventofcode.year_2020.day_04_2020 import part_one
+from adventofcode.year_2020.day_04_2020 import part_two
+from adventofcode.year_2020.day_04_2020 import verify_passport_1
+from adventofcode.year_2020.day_04_2020 import verify_passport_2
 
 
 def test_parse_passports():

@@ -10,11 +10,11 @@ def replace(molecule, start, end, replacement):
 
 def numReplacements(replacements, molecule):
     newMolecules = []
-    maxKeySize = max([len(key) for key in replacements])
+    maxKeySize = max(len(key) for key in replacements)
     for i in range(len(molecule)):
         for j in range(maxKeySize):
-            if molecule[i: i + j + 1] in replacements:
-                for newMolecule in replacements[molecule[i: i + j + 1]]:
+            if molecule[i : i + j + 1] in replacements:
+                for newMolecule in replacements[molecule[i : i + j + 1]]:
                     newMolecules.append(replace(molecule, i, i + j + 1, newMolecule))
     return len(set(newMolecules))
 

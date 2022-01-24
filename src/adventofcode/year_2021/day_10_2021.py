@@ -1,9 +1,9 @@
-from typing import List, Deque
+from collections import deque
+from typing import Deque
+from typing import List
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-from collections import deque
 
 
 def is_valid_chunk(chunk: str):

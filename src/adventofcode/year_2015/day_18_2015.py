@@ -65,14 +65,14 @@ def iterateBoard2(board, iterations):
 def part_one(input_data: List[str]):
     input_data = [list(line) for line in input_data]
     p1 = iterateBoard(input_data, 100)
-    return sum([lst.count("#") for lst in p1])
+    return sum(lst.count("#") for lst in p1)
 
 
 @solution_timer(2015, 18, 2)
 def part_two(input_data: List[str]):
     input_data = [list(line) for line in input_data]
     p2 = iterateBoard2(input_data, 100)
-    return sum([lst.count("#") for lst in p2])
+    return sum(lst.count("#") for lst in p2)
 
 
 if __name__ == "__main__":

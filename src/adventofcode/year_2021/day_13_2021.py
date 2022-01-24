@@ -1,9 +1,8 @@
+from dataclasses import dataclass
 from typing import List
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-from dataclasses import dataclass
 
 
 @dataclass(frozen=True, eq=True)
@@ -22,7 +21,7 @@ def print_grid(points: List[Point]):
     max_x = max(point.x for point in points)
     max_y = max(point.y for point in points)
     print("-" * max_x)
-    print("\n".join("".join(u"\u25A0" if Point(x, y) in points else " " for x in range(max_x + 1)) for y in range(max_y + 1)))
+    print("\n".join("".join("\u25A0" if Point(x, y) in points else " " for x in range(max_x + 1)) for y in range(max_y + 1)))
     print("-" * max_x)
 
 

@@ -1,6 +1,7 @@
 import pytest
-
-from adventofcode.util.math_helpers import gaussian_sum, mean_floor, mean_ceil
+from adventofcode.util.math_helpers import gaussian_sum
+from adventofcode.util.math_helpers import mean_ceil
+from adventofcode.util.math_helpers import mean_floor
 
 
 @pytest.mark.parametrize("number", [*range(0, 10, 3)])

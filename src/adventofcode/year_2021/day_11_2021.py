@@ -1,9 +1,10 @@
-from typing import List, Set, Tuple
+from copy import deepcopy
+from typing import List
+from typing import Set
+from typing import Tuple
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-from copy import deepcopy
 
 
 def increment_levels(levels: List[List[int]], row: int, col: int, updated: Set[Tuple[int, int]]):

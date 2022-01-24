@@ -45,8 +45,8 @@ def isNice_2(word):
     if not repeated:
         return False
     for i in range(n):
-        pair = word[i: i + 2]
-        if pair in word[i + 2:]:
+        pair = word[i : i + 2]
+        if pair in word[i + 2 :]:
             return True
 
     return False

@@ -1,14 +1,14 @@
 import os
 import sys
 from argparse import ArgumentParser
-from typing import List, Tuple
-
-from requests import HTTPError  # noqa
+from typing import List
+from typing import Tuple
 
 from adventofcode.config import ROOT_DIR
 from adventofcode.scripts.get_inputs import get_input
 from adventofcode.util.console import console
 from adventofcode.util.input_helpers import get_input_for_day
+from requests import HTTPError  # noqa
 
 
 def add_day():

@@ -2,17 +2,14 @@ import os
 
 import pytest
 import pytest_mock
-
 from adventofcode.config import ROOT_DIR
-from adventofcode.util.module_helpers import (
-    get_full_year_paths,
-    get_full_day_paths,
-    get_functions_from_day_file,
-    clean_year,
-    clean_day,
-    year_dir_from_path,
-    get_full_module_from_day_file,
-)
+from adventofcode.util.module_helpers import clean_day
+from adventofcode.util.module_helpers import clean_year
+from adventofcode.util.module_helpers import get_full_day_paths
+from adventofcode.util.module_helpers import get_full_module_from_day_file
+from adventofcode.util.module_helpers import get_full_year_paths
+from adventofcode.util.module_helpers import get_functions_from_day_file
+from adventofcode.util.module_helpers import year_dir_from_path
 
 
 def test_get_full_year_paths(mocker: pytest_mock.MockerFixture):

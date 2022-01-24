@@ -1,4 +1,6 @@
-from adventofcode.year_2021.day_04_2021 import part_one, part_two, parse_boards
+from adventofcode.year_2021.day_04_2021 import parse_boards
+from adventofcode.year_2021.day_04_2021 import part_one
+from adventofcode.year_2021.day_04_2021 import part_two
 
 
 def test_parse_boards():

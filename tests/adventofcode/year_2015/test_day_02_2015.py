@@ -1,5 +1,6 @@
 import pytest
-from adventofcode.year_2015.day_02_2015 import part_one, part_two
+from adventofcode.year_2015.day_02_2015 import part_one
+from adventofcode.year_2015.day_02_2015 import part_two
 
 
 @pytest.mark.parametrize(["line", "expected"], [("2x3x4", 58), ("1x1x10", 43)])

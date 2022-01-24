@@ -1,13 +1,12 @@
+import re
 from typing import List
 
 from adventofcode.util.exceptions import SolutionNotFoundException
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
-import re
-
 alp = "abcdefghijklmnopqrstuvwxyz"
-consecutive = [alp[i: i + 3] for i in range(24)]
+consecutive = [alp[i : i + 3] for i in range(24)]
 inc = {"z": "a"}
 for i in range(25):
     inc[alp[i]] = alp[i + 1]

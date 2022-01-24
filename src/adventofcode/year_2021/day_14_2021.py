@@ -1,9 +1,9 @@
-from typing import List, Dict
+from collections import Counter
+from typing import Dict
+from typing import List
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-from collections import Counter
 from more_itertools import windowed
 
 
@@ -19,8 +19,8 @@ def part_one(input_data: List[str]):
     for _ in range(10):
         i = 0
         while i < len(polymer) - 1:
-            insert = insertions[polymer[i: i + 2]]
-            polymer = polymer[: i + 1] + insert + polymer[i + 1:]
+            insert = insertions[polymer[i : i + 2]]
+            polymer = polymer[: i + 1] + insert + polymer[i + 1 :]
             i += 2
     counts = Counter(polymer)
     mostCom = counts.most_common()[0]

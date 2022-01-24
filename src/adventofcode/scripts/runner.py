@@ -1,14 +1,12 @@
 from adventofcode import config
 from adventofcode.util.console import console
 from adventofcode.util.input_helpers import get_input_for_day
-from adventofcode.util.module_helpers import (
-    get_full_year_paths,
-    clean_year,
-    get_full_day_paths,
-    year_dir_from_path,
-    get_full_module_from_day_file,
-    clean_day,
-)
+from adventofcode.util.module_helpers import clean_day
+from adventofcode.util.module_helpers import clean_year
+from adventofcode.util.module_helpers import get_full_day_paths
+from adventofcode.util.module_helpers import get_full_module_from_day_file
+from adventofcode.util.module_helpers import get_full_year_paths
+from adventofcode.util.module_helpers import year_dir_from_path
 
 
 def run_all() -> None:

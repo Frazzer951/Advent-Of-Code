@@ -1,10 +1,8 @@
 import pytest
-from adventofcode.year_2020.day_02_2020 import (
-    part_one,
-    part_two,
-    is_valid_password_1,
-    is_valid_password_2,
-)
+from adventofcode.year_2020.day_02_2020 import is_valid_password_1
+from adventofcode.year_2020.day_02_2020 import is_valid_password_2
+from adventofcode.year_2020.day_02_2020 import part_one
+from adventofcode.year_2020.day_02_2020 import part_two
 
 
 @pytest.mark.parametrize(

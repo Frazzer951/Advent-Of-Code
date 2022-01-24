@@ -1,5 +1,6 @@
 import pytest
-from adventofcode.year_2015.day_14_2015 import get_distance, part_two
+from adventofcode.year_2015.day_14_2015 import get_distance
+from adventofcode.year_2015.day_14_2015 import part_two
 
 
 @pytest.mark.parametrize(

@@ -1,5 +1,6 @@
 import pytest
-from adventofcode.year_2015.day_21_2015 import stats, simFight
+from adventofcode.year_2015.day_21_2015 import simFight
+from adventofcode.year_2015.day_21_2015 import stats
 
 
 @pytest.mark.parametrize(

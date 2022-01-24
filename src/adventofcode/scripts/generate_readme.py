@@ -1,15 +1,14 @@
 import os
 import re
-from typing import Dict, List
+from typing import Dict
+from typing import List
 
 from adventofcode.config import ROOT_DIR
-from adventofcode.util.module_helpers import (
-    get_functions_from_day_file,
-    get_full_day_paths,
-    get_full_year_paths,
-    clean_day,
-    clean_year,
-)
+from adventofcode.util.module_helpers import clean_day
+from adventofcode.util.module_helpers import clean_year
+from adventofcode.util.module_helpers import get_full_day_paths
+from adventofcode.util.module_helpers import get_full_year_paths
+from adventofcode.util.module_helpers import get_functions_from_day_file
 
 YearDayType = Dict[int, Dict[int, Dict[str, bool]]]
 
@@ -80,7 +79,7 @@ def _update_stars_in_image():
 
 def _count_stars() -> int:
     found = _find_completed_days()
-    return sum([val for days in found.values() for parts in days.values() for val in parts.values()])
+    return sum(val for days in found.values() for parts in days.values() for val in parts.values())
 
 
 def _update_year_readme(year: int) -> None:
@@ -88,7 +87,7 @@ def _update_year_readme(year: int) -> None:
     header: List[str] = [f"# {year}"]
 
     days = found.keys()
-    completed_parts = sum([len(parts.keys()) for parts in found.values()])
+    completed_parts = sum(len(parts.keys()) for parts in found.values())
     body: List[str] = [
         f'Solutions for {len(days)} {"day" if len(days) == 0 else "days"} in {year} '
         f"with a total of {completed_parts} stars collected",

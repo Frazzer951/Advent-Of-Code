@@ -1,18 +1,17 @@
+import json
 from typing import List
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
 
-import json
-
 
 def sum_of_nums(item, skipRed=False):
     if isinstance(item, list):
-        return sum([sum_of_nums(i, skipRed) for i in item])
+        return sum(sum_of_nums(i, skipRed) for i in item)
     if isinstance(item, dict):
         if skipRed and "red" in item.values():
             return 0
-        return sum([sum_of_nums(i, skipRed) for i in item.values()])
+        return sum(sum_of_nums(i, skipRed) for i in item.values())
     if isinstance(item, int):
         return item
     return 0

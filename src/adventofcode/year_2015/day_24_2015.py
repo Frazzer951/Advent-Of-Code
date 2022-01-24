@@ -1,11 +1,10 @@
+from functools import reduce
+from itertools import combinations
+from operator import mul
 from typing import List
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-from functools import reduce
-from itertools import combinations
-from operator import mul
 
 
 def splitPresents(weights, num_groups):

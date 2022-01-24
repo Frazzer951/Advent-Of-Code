@@ -18,7 +18,7 @@ def part_two(input_data: List[str]):
     input_data = [int(x) for x in input_data]
     increasing_count = 0
     for i in range(1, len(input_data) - 2):
-        if sum(input_data[i - 1: i + 2]) < sum(input_data[i: i + 3]):
+        if sum(input_data[i - 1 : i + 2]) < sum(input_data[i : i + 3]):
             increasing_count += 1
     return increasing_count
 

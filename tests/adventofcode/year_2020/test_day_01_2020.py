@@ -1,5 +1,6 @@
 import pytest
-from adventofcode.year_2020.day_01_2020 import part_one, part_two
+from adventofcode.year_2020.day_01_2020 import part_one
+from adventofcode.year_2020.day_01_2020 import part_two
 
 
 @pytest.mark.parametrize(["line", "expected"], [([1721, 979, 366, 299, 675, 1456], 514579)])

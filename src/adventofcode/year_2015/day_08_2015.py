@@ -1,9 +1,8 @@
+import re
 from typing import List
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-import re
 
 
 def size_in_memory(str):

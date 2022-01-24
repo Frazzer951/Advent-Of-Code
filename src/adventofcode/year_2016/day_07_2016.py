@@ -20,7 +20,7 @@ def does_support_tls(ip):
         elif ip[i] == "]":
             inside_brackets = False
         else:
-            if is_abba_sequence(ip[i: i + 4]):
+            if is_abba_sequence(ip[i : i + 4]):
                 if inside_brackets:
                     return False
                 abba_count += 1
@@ -40,9 +40,9 @@ def get_aba_sequences(sequence):
             continue
         if sequence[i] == sequence[i + 2] and sequence[i] != sequence[i + 1]:
             if inside_brackets:
-                bab_sequences.append(sequence[i: i + 3])
+                bab_sequences.append(sequence[i : i + 3])
             else:
-                aba_sequences.append(sequence[i: i + 3])
+                aba_sequences.append(sequence[i : i + 3])
     return aba_sequences, bab_sequences
 
 

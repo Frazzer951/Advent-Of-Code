@@ -57,7 +57,7 @@ def part_two(input_data: List[str]):
             if basin:
                 basins.append(basin)
                 basin = []
-    basinSizes = sorted([len(basin) for basin in basins])
+    basinSizes = sorted(len(basin) for basin in basins)
     largestBasins = basinSizes[-3:]
     finalProduct = 1
     for basin in largestBasins:

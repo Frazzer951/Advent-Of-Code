@@ -1,9 +1,10 @@
-from typing import Any, List
+from dataclasses import dataclass
+from dataclasses import field
+from typing import Any
+from typing import List
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-from dataclasses import dataclass, field
 
 hex_dict = {
     "0": "0000",

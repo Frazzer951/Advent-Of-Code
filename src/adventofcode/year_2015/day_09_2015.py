@@ -1,10 +1,9 @@
+import math
+from itertools import permutations
 from typing import List
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-from itertools import permutations
-import math
 
 
 @solution_timer(2015, 9, 1)

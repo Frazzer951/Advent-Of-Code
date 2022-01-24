@@ -1,5 +1,6 @@
 import pytest
-from adventofcode.year_2015.day_05_2015 import isNice_1, isNice_2
+from adventofcode.year_2015.day_05_2015 import isNice_1
+from adventofcode.year_2015.day_05_2015 import isNice_2
 
 
 @pytest.mark.parametrize(

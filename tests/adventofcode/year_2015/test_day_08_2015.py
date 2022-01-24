@@ -1,5 +1,6 @@
 import pytest
-from adventofcode.year_2015.day_08_2015 import size_in_memory, size_encoded
+from adventofcode.year_2015.day_08_2015 import size_encoded
+from adventofcode.year_2015.day_08_2015 import size_in_memory
 
 
 @pytest.mark.parametrize(

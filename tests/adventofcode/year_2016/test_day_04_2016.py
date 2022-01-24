@@ -1,5 +1,7 @@
 import pytest
-from adventofcode.year_2016.day_04_2016 import is_real, decrypt_name, part_one
+from adventofcode.year_2016.day_04_2016 import decrypt_name
+from adventofcode.year_2016.day_04_2016 import is_real
+from adventofcode.year_2016.day_04_2016 import part_one
 
 
 @pytest.mark.parametrize(

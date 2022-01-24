@@ -1,9 +1,8 @@
+import math
 from typing import List
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-import math
 
 
 def calculate_fuel_cost(heights: List[int], position: int):

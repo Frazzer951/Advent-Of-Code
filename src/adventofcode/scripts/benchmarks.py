@@ -1,22 +1,21 @@
 import os
 from concurrent.futures import ProcessPoolExecutor
-from typing import Dict, List, Tuple
-
-from rich.table import Table
+from typing import Dict
+from typing import List
+from typing import Tuple
 
 from adventofcode import config
 from adventofcode.config import ROOT_DIR
 from adventofcode.scripts.generate_readme import _replace_between_tags
 from adventofcode.util.console import console
 from adventofcode.util.input_helpers import get_input_for_day
-from adventofcode.util.module_helpers import (
-    get_full_year_paths,
-    year_dir_from_path,
-    clean_year,
-    get_full_day_paths,
-    clean_day,
-    get_full_module_from_day_file,
-)
+from adventofcode.util.module_helpers import clean_day
+from adventofcode.util.module_helpers import clean_year
+from adventofcode.util.module_helpers import get_full_day_paths
+from adventofcode.util.module_helpers import get_full_module_from_day_file
+from adventofcode.util.module_helpers import get_full_year_paths
+from adventofcode.util.module_helpers import year_dir_from_path
+from rich.table import Table
 
 Benchmarks = Dict[int, Dict[int, Dict[str, float]]]
 

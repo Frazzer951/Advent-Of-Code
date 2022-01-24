@@ -1,9 +1,9 @@
-from typing import List, Tuple
+from fractions import Fraction
+from typing import List
+from typing import Tuple
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-from fractions import Fraction
 
 
 def print_board(board: List[List[int]]):

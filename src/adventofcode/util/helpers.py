@@ -2,9 +2,15 @@ import cProfile
 import os
 import pstats
 import time
-from typing import Callable, Literal, Dict, Any, List, Tuple
+from typing import Any
+from typing import Callable
+from typing import Dict
+from typing import List
+from typing import Literal
+from typing import Tuple
 
-from adventofcode.config import RUNNING_ALL, RUNNING_BENCHMARKS
+from adventofcode.config import RUNNING_ALL
+from adventofcode.config import RUNNING_BENCHMARKS
 from adventofcode.util.console import console
 from adventofcode.util.exceptions import SolutionNotFoundException
 

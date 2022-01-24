@@ -1,4 +1,5 @@
-from adventofcode.year_2015.day_17_2015 import find_combinations, find_different_ways
+from adventofcode.year_2015.day_17_2015 import find_combinations
+from adventofcode.year_2015.day_17_2015 import find_different_ways
 
 
 def test_part_one():

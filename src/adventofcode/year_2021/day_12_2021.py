@@ -1,4 +1,6 @@
-from typing import List, Dict, Set
+from typing import Dict
+from typing import List
+from typing import Set
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day

@@ -1,5 +1,6 @@
 import pytest
-from adventofcode.year_2016.day_07_2016 import does_support_tls, does_support_ssl
+from adventofcode.year_2016.day_07_2016 import does_support_ssl
+from adventofcode.year_2016.day_07_2016 import does_support_tls
 
 
 @pytest.mark.parametrize(

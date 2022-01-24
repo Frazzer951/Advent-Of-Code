@@ -1,5 +1,8 @@
 import pytest
-from adventofcode.year_2021.day_10_2021 import part_one, part_two, is_valid_chunk, get_score
+from adventofcode.year_2021.day_10_2021 import get_score
+from adventofcode.year_2021.day_10_2021 import is_valid_chunk
+from adventofcode.year_2021.day_10_2021 import part_one
+from adventofcode.year_2021.day_10_2021 import part_two
 
 
 @pytest.mark.parametrize(

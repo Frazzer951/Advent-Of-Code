@@ -25,7 +25,7 @@ def get_functions_from_day_file(day: str):
     """
     Uses ast to retrieve all top level functions in the provided day file
     """
-    with open(day, "rt") as f:
+    with open(day) as f:
         parsed = ast.parse(f.read(), filename=day)
 
     return [func.name for func in parsed.body if isinstance(func, ast.FunctionDef)]
@@ -36,7 +36,7 @@ def clean_year(year_path: str) -> int:
     Removes the 'year_' prefix from the year directory
     """
     year_segment = year_dir_from_path(year_path)
-    return int(year_segment[len("year_"):])
+    return int(year_segment[len("year_") :])
 
 
 def clean_day(day_file: str) -> int:

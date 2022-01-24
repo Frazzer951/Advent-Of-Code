@@ -1,6 +1,5 @@
-from typing import List
-
 import math
+from typing import List
 
 
 def mean(target_list: List[int], floor: bool = True) -> int:

@@ -1,11 +1,12 @@
-from typing import List, Dict, Tuple
+import heapq
+import math
+from collections import defaultdict
+from typing import Dict
+from typing import List
+from typing import Tuple
 
 from adventofcode.util.helpers import solution_timer
 from adventofcode.util.input_helpers import get_input_for_day
-
-import math
-import heapq
-from collections import defaultdict
 
 
 class Node:
@@ -81,7 +82,7 @@ def part_one(input_data: List[str]):
     path = a_star(nodes[0], nodes[-1])
     # print(path)
     path = path[1:]
-    path_weight = sum([node.weight for node in path])
+    path_weight = sum(node.weight for node in path)
     return path_weight
 
 
@@ -119,7 +120,7 @@ def part_two(input_data: List[str]):
     path = a_star(nodes[0], nodes[-1])
     # print(path)
     path = path[1:]
-    path_weight = sum([node.weight for node in path])
+    path_weight = sum(node.weight for node in path)
     return path_weight
 
 
