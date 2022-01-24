@@ -17,7 +17,7 @@ def generate_readme():
     path = os.path.join(ROOT_DIR, "../../README.md")
     readme_file = os.path.abspath(path)
 
-    with open(readme_file) as f:
+    with open(readme_file, encoding="UTF-8") as f:
         current_readme = f.read()
 
     readme = _replace_between_tags(
@@ -26,7 +26,7 @@ def generate_readme():
 
     readme = _update_stars(readme)
 
-    with open(readme_file, "w") as f:
+    with open(readme_file, "w", encoding="UTF-8") as f:
         f.write(readme)
 
     _update_stars_in_image()
@@ -60,20 +60,20 @@ def _update_stars_in_image():
     image_light = os.path.join(ROOT_DIR, "../../image_light.svg")
     content = f'				<span class="star-count">{star_count}</span>'
 
-    with open(image_dark) as f:
+    with open(image_dark, encoding="UTF-8") as f:
         svg_content = f.read()
 
     svg_content = _replace_between_tags(svg_content, content, "<!-- start star count -->", "<!-- end star count -->")
 
-    with open(image_dark, "w") as f:
+    with open(image_dark, "w", encoding="UTF-8") as f:
         f.write(svg_content)
 
-    with open(image_light) as f:
+    with open(image_light, encoding="UTF-8") as f:
         svg_content = f.read()
 
     svg_content = _replace_between_tags(svg_content, content, "<!-- start star count -->", "<!-- end star count -->")
 
-    with open(image_light, "w") as f:
+    with open(image_light, "w", encoding="UTF-8") as f:
         f.write(svg_content)
 
 
@@ -98,8 +98,9 @@ def _update_year_readme(year: int) -> None:
     year_readme_file = os.path.join(ROOT_DIR, f"year_{year}/README.md")
     text = header + body
 
-    with open(year_readme_file, "w") as f:
+    with open(year_readme_file, "w", encoding="UTF-8") as f:
         f.write("\n".join(text))
+        f.write("\n")
 
 
 def _create_year_overview(completed_days: Dict[int, Dict[str, bool]]) -> List[str]:
@@ -155,3 +156,7 @@ def _find_completed_days() -> YearDayType:
             items[year][day]["part_two"] = "part_two" in funcs
 
     return items
+
+
+if __name__ == "__main__":
+    generate_readme()

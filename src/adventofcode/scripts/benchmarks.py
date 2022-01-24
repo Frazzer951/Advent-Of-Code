@@ -1,5 +1,6 @@
 import os
 from concurrent.futures import ProcessPoolExecutor
+from types import ModuleType
 from typing import Dict
 from typing import List
 from typing import Tuple
@@ -189,7 +190,7 @@ def _retrieve_benchmarks() -> Benchmarks:
     return benchmarks
 
 
-def _get_extra_solutions_in_module(module: str) -> List[str]:
+def _get_extra_solutions_in_module(module: ModuleType) -> List[str]:
     def _eval_functions(f: str) -> bool:
         return f not in ["part_one", "part_two"] and (f.startswith("part_one") or f.startswith("part_two"))
 
@@ -197,7 +198,7 @@ def _get_extra_solutions_in_module(module: str) -> List[str]:
     return [f for f in functions if _eval_functions(f)]
 
 
-def _run_day(module: str, year: int, day: int, benchmarks: Benchmarks):
+def _run_day(module: ModuleType, year: int, day: int, benchmarks: Benchmarks):
     """
     Runs all solutions in the given day
     """
@@ -228,7 +229,7 @@ def _run_day(module: str, year: int, day: int, benchmarks: Benchmarks):
         console.log(f"ran {year} {day:02} {readable_name}")
 
 
-def _run_day_mp(module: str, year: int, day: int, benchmarks: Dict[int, Dict[str, float]]):
+def _run_day_mp(module: ModuleType, year: int, day: int, benchmarks: Dict[int, Dict[str, float]]):
     """
     Runs all solutions in the given day
     """

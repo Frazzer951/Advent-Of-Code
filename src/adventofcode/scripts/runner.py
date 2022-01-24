@@ -1,3 +1,5 @@
+from types import ModuleType
+
 from adventofcode import config
 from adventofcode.util.console import console
 from adventofcode.util.input_helpers import get_input_for_day
@@ -36,7 +38,7 @@ def run_all() -> None:
     config.RUNNING_ALL = False
 
 
-def _run_day(module: str, year: int, day: int):
+def _run_day(module: ModuleType, year: int, day: int):
     """
     Runs all solutions in the given day
     """
