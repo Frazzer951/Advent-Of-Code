@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from posixpath import split
 from typing import List
 
 from adventofcode.util.exceptions import SolutionNotFoundException
