@@ -1,4 +1,3 @@
-import pytest
 from adventofcode.year_2020.day_09_2020 import part_one
 from adventofcode.year_2020.day_09_2020 import part_two
 
