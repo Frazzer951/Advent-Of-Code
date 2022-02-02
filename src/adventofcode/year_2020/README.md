@@ -1,5 +1,5 @@
 # 2020
-Solutions for 8 days in 2020 with a total of 16 stars collected
+Solutions for 10 days in 2020 with a total of 20 stars collected
 
 | day   | part one | part two |
 | :---: | :------: | :------: |
@@ -11,3 +11,5 @@ Solutions for 8 days in 2020 with a total of 16 stars collected
 | 06 | ⭐️ | ⭐️ |
 | 07 | ⭐️ | ⭐️ |
 | 08 | ⭐️ | ⭐️ |
+| 09 | ⭐️ | ⭐️ |
+| 10 | ⭐️ | ⭐️ |

@@ -1,6 +1,6 @@
 # Advent of Code ⭐️
 
-[![Stars collected](https://shields.io/static/v1?label=stars%20collected&message=118&color=yellow)](https://github.com/Frazzer951/Advent-Of-Code)
+[![Stars collected](https://shields.io/static/v1?label=stars%20collected&message=122&color=yellow)](https://github.com/Frazzer951/Advent-Of-Code)
 [![tests](https://github.com/Frazzer951/Advent-Of-Code/actions/workflows/tests.yaml/badge.svg?branch=master)](https://github.com/Frazzer951/Advent-Of-Code)
 
 ![advent of code](./image_dark.svg#gh-dark-mode-only)
@@ -80,6 +80,8 @@ Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/ad
 | 06 | ⭐️ | ⭐️ |
 | 07 | ⭐️ | ⭐️ |
 | 08 | ⭐️ | ⭐️ |
+| 09 | ⭐️ | ⭐️ |
+| 10 | ⭐️ | ⭐️ |
 
 </p>
 </details>
@@ -143,8 +145,6 @@ Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/ad
 
 | day   | part one | part two |
 | :---: | :------: | :------: |
-| 09 | ❌ | ❌ |
-| 10 | ❌ | ❌ |
 | 11 | ❌ | ❌ |
 | 12 | ❌ | ❌ |
 | 13 | ❌ | ❌ |
@@ -193,55 +193,55 @@ Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/ad
 
 |  day  | part  | duration |
 | :---: | :---: | -------: |
-| 01 | part one | 0.44 ms |
-| 01 | part two | 0.31 ms |
-| 02 | part one | 1.40 ms |
-| 02 | part two | 1.27 ms |
-| 03 | part one | 2.13 ms |
-| 03 | part two | 2.21 ms |
-| 04 | part one | 285.31 ms |
-| 04 | part two | 10138.03 ms |
-| 05 | part one | 3.56 ms |
-| 05 | part two | 2.84 ms |
-| 06 | part one | 1410.64 ms |
-| 06 | part two | 3988.50 ms |
-| 07 | part one | 55.74 ms |
-| 07 | part two | 54.74 ms |
-| 08 | part one | 0.60 ms |
-| 08 | part two | 0.23 ms |
-| 09 | part one | 67.84 ms |
-| 09 | part two | 67.88 ms |
-| 10 | part one | 282.70 ms |
-| 10 | part two | 4119.18 ms |
-| 11 | part one | 0.01 ms |
+| 01 | part one | 0.47 ms |
+| 01 | part two | 0.30 ms |
+| 02 | part one | 1.68 ms |
+| 02 | part two | 1.50 ms |
+| 03 | part one | 2.26 ms |
+| 03 | part two | 2.59 ms |
+| 04 | part one | 364.62 ms |
+| 04 | part two | 13015.53 ms |
+| 05 | part one | 3.97 ms |
+| 05 | part two | 3.11 ms |
+| 06 | part one | 1499.20 ms |
+| 06 | part two | 4677.83 ms |
+| 07 | part one | 63.92 ms |
+| 07 | part two | 64.00 ms |
+| 08 | part one | 0.72 ms |
+| 08 | part two | 0.29 ms |
+| 09 | part one | 78.81 ms |
+| 09 | part two | 79.82 ms |
+| 10 | part one | 327.65 ms |
+| 10 | part two | 4744.18 ms |
+| 11 | part one | 0.02 ms |
 | 11 | part two | 0.01 ms |
-| 12 | part one | 2.14 ms |
-| 12 | part two | 1.40 ms |
-| 13 | part one | 20.82 ms |
-| 13 | part two | 178.15 ms |
-| 14 | part one | 0.20 ms |
-| 14 | part two | 5.82 ms |
-| 15 | part one | 6193.69 ms |
-| 15 | part two | 5988.04 ms |
-| 16 | part one | 1.32 ms |
-| 16 | part two | 1.40 ms |
-| 17 | part one | 234.78 ms |
-| 17 | part two | 119.91 ms |
-| 18 | part one | 3695.58 ms |
-| 18 | part two | 3705.95 ms |
-| 19 | part one | 0.81 ms |
-| 19 | part two | 0.04 ms |
-| 20 | part one | 16167.07 ms |
-| 20 | part two | 6116.82 ms |
-| 21 | part one | 19.68 ms |
-| 21 | part two | 19.08 ms |
-| 22 | part one | 4368.60 ms |
-| 22 | part two | 324.96 ms |
-| 23 | part one | 0.57 ms |
-| 23 | part two | 0.72 ms |
-| 24 | part one | 86.58 ms |
-| 24 | part two | 19.92 ms |
-| 25 | part one | 2110.49 ms |
+| 12 | part one | 2.48 ms |
+| 12 | part two | 1.64 ms |
+| 13 | part one | 24.45 ms |
+| 13 | part two | 206.35 ms |
+| 14 | part one | 0.23 ms |
+| 14 | part two | 6.38 ms |
+| 15 | part one | 6228.79 ms |
+| 15 | part two | 6029.78 ms |
+| 16 | part one | 1.58 ms |
+| 16 | part two | 1.62 ms |
+| 17 | part one | 246.77 ms |
+| 17 | part two | 129.17 ms |
+| 18 | part one | 3628.09 ms |
+| 18 | part two | 3627.74 ms |
+| 19 | part one | 0.99 ms |
+| 19 | part two | 0.05 ms |
+| 20 | part one | 14148.53 ms |
+| 20 | part two | 6107.97 ms |
+| 21 | part one | 22.57 ms |
+| 21 | part two | 21.67 ms |
+| 22 | part one | 4830.91 ms |
+| 22 | part two | 351.98 ms |
+| 23 | part one | 0.65 ms |
+| 23 | part two | 0.81 ms |
+| 24 | part one | 92.46 ms |
+| 24 | part two | 21.14 ms |
+| 25 | part one | 1946.64 ms |
 | 25 | part two | 0.00 ms |
 
 </p>
@@ -253,27 +253,27 @@ Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/ad
 
 |  day  | part  | duration |
 | :---: | :---: | -------: |
-| 01 | part one | 0.11 ms |
-| 01 | part two | 3.43 ms |
-| 02 | part one | 0.45 ms |
-| 02 | part two | 0.47 ms |
-| 03 | part one | 2.33 ms |
-| 03 | part two | 3.28 ms |
-| 04 | part one | 10.83 ms |
-| 04 | part two | 6.27 ms |
-| 05 | part one | 8030.68 ms |
-| 05 | part two | 27225.38 ms |
-| 06 | part one | 1.15 ms |
-| 06 | part two | 1.13 ms |
-| 07 | part one | 86.06 ms |
-| 07 | part two | 63.39 ms |
-| 08 | part one | 0.44 ms |
+| 01 | part one | 0.13 ms |
+| 01 | part two | 3.37 ms |
+| 02 | part one | 0.47 ms |
+| 02 | part two | 0.51 ms |
+| 03 | part one | 2.76 ms |
+| 03 | part two | 7.25 ms |
+| 04 | part one | 12.46 ms |
+| 04 | part two | 7.30 ms |
+| 05 | part one | 10153.43 ms |
+| 05 | part two | 34251.57 ms |
+| 06 | part one | 1.35 ms |
+| 06 | part two | 1.31 ms |
+| 07 | part one | 95.19 ms |
+| 07 | part two | 71.32 ms |
+| 08 | part one | 0.51 ms |
 | 08 | part two | 0.00 ms |
 | 09 | part one | 0.06 ms |
-| 09 | part two | 1.97 ms |
+| 09 | part two | 2.42 ms |
 | 09 | part two helper | 1.00 ms |
-| 10 | part one | 1.58 ms |
-| 10 | part two | 2.36 ms |
+| 10 | part one | 1.78 ms |
+| 10 | part two | 2.61 ms |
 
 </p>
 </details>
@@ -284,22 +284,26 @@ Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/ad
 
 |  day  | part  | duration |
 | :---: | :---: | -------: |
-| 01 | part one | 0.10 ms |
-| 01 | part two | 36.63 ms |
-| 02 | part one | 0.97 ms |
-| 02 | part two | 0.92 ms |
+| 01 | part one | 0.11 ms |
+| 01 | part two | 39.93 ms |
+| 02 | part one | 1.09 ms |
+| 02 | part two | 1.07 ms |
 | 03 | part one | 0.09 ms |
-| 03 | part two | 0.37 ms |
-| 04 | part one | 1.26 ms |
-| 04 | part two | 1.61 ms |
-| 05 | part one | 0.93 ms |
-| 05 | part two | 1.05 ms |
-| 06 | part one | 0.58 ms |
-| 06 | part two | 1.33 ms |
-| 07 | part one | 1.63 ms |
-| 07 | part two | 1.85 ms |
-| 08 | part one | 0.13 ms |
-| 08 | part two | 7.38 ms |
+| 03 | part two | 0.39 ms |
+| 04 | part one | 1.36 ms |
+| 04 | part two | 1.81 ms |
+| 05 | part one | 1.00 ms |
+| 05 | part two | 1.15 ms |
+| 06 | part one | 0.76 ms |
+| 06 | part two | 1.69 ms |
+| 07 | part one | 1.94 ms |
+| 07 | part two | 2.18 ms |
+| 08 | part one | 0.14 ms |
+| 08 | part two | 8.45 ms |
+| 09 | part one | 1.15 ms |
+| 09 | part two | 8.17 ms |
+| 10 | part one | 0.05 ms |
+| 10 | part two | 0.07 ms |
 
 </p>
 </details>
@@ -310,38 +314,38 @@ Original Setup Script by [marcelblijleven](https://github.com/marcelblijleven/ad
 
 |  day  | part  | duration |
 | :---: | :---: | -------: |
-| 01 | part one | 0.78 ms |
-| 01 | part two | 1.35 ms |
-| 02 | part one | 0.38 ms |
-| 02 | part two | 0.46 ms |
-| 03 | part one | 2.94 ms |
-| 03 | part two | 1.16 ms |
-| 04 | part one | 9.60 ms |
-| 04 | part two | 42.42 ms |
-| 05 | part one | 75.22 ms |
-| 05 | part two | 97.44 ms |
-| 06 | part one | 546.47 ms |
-| 06 | part two | 0.44 ms |
-| 07 | part one | 186.85 ms |
-| 07 | part two | 478.31 ms |
-| 08 | part one | 0.19 ms |
-| 08 | part two | 5.02 ms |
-| 09 | part one | 4.10 ms |
-| 09 | part two | 8.66 ms |
-| 10 | part one | 1.98 ms |
-| 10 | part two | 3.33 ms |
-| 11 | part one | 14.06 ms |
-| 11 | part two | 27.18 ms |
-| 12 | part one | 15.61 ms |
-| 12 | part two | 2344.64 ms |
-| 13 | part one | 2.47 ms |
-| 13 | part two | 50.16 ms |
-| 14 | part one | 20.62 ms |
-| 14 | part two | 6.01 ms |
-| 15 | part one | 71.25 ms |
-| 15 | part two | 2568.25 ms |
-| 16 | part one | 1.05 ms |
-| 16 | part two | 0.91 ms |
+| 01 | part one | 0.96 ms |
+| 01 | part two | 1.58 ms |
+| 02 | part one | 0.43 ms |
+| 02 | part two | 0.53 ms |
+| 03 | part one | 3.52 ms |
+| 03 | part two | 1.38 ms |
+| 04 | part one | 10.12 ms |
+| 04 | part two | 44.13 ms |
+| 05 | part one | 77.15 ms |
+| 05 | part two | 98.08 ms |
+| 06 | part one | 600.63 ms |
+| 06 | part two | 0.50 ms |
+| 07 | part one | 192.01 ms |
+| 07 | part two | 521.34 ms |
+| 08 | part one | 0.24 ms |
+| 08 | part two | 6.24 ms |
+| 09 | part one | 4.43 ms |
+| 09 | part two | 9.98 ms |
+| 10 | part one | 2.13 ms |
+| 10 | part two | 3.49 ms |
+| 11 | part one | 15.66 ms |
+| 11 | part two | 30.63 ms |
+| 12 | part one | 17.09 ms |
+| 12 | part two | 2383.67 ms |
+| 13 | part one | 2.81 ms |
+| 13 | part two | 53.03 ms |
+| 14 | part one | 22.10 ms |
+| 14 | part two | 6.87 ms |
+| 15 | part one | 85.11 ms |
+| 15 | part two | 2729.49 ms |
+| 16 | part one | 1.21 ms |
+| 16 | part two | 1.05 ms |
 
 </p>
 </details>
