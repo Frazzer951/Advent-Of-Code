@@ -20,8 +20,7 @@ def part_one(input_data: List[str]):
 
 def is_valid_passphrase_2(passphrase: str) -> bool:
     words = passphrase.split()
-    words_set = {"".join(sorted(word)) for word in words}
-    return len(words) == len(words_set)
+    return len(words) == len({"".join(sorted(word)) for word in words})
 
 
 @solution_timer(2017, 4, 2)
