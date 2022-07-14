@@ -1,2 +1,2 @@
-more-itertools>=4.2.0
-rich>=10
+more-itertools==4.2.0
+rich==10
