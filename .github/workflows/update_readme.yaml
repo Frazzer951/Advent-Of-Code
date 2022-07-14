@@ -25,9 +25,9 @@ jobs:
           # daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'  # Regular expression that finds the content of the days completed badge iun your file.
 
       - uses: k2bd/advent-readme-stars@v1
+        name: Update Stars
         with:
           userId: 1052226
-          leaderboardId: 1052226
           sessionCookie: ${{ secrets.AOC_SESSION }}
 
       - uses: stefanzweifel/git-auto-commit-action@v4
