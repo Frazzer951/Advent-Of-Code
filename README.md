@@ -1,12 +1,17 @@
+<div align="center">
+
 # Advent of Code ⭐️
 
+
 [![Stars collected](https://shields.io/static/v1?label=stars%20collected&message=130&color=yellow)](https://github.com/Frazzer951/Advent-Of-Code)
-[![tests](https://github.com/Frazzer951/Advent-Of-Code/actions/workflows/tests.yaml/badge.svg?branch=master)](https://github.com/Frazzer951/Advent-Of-Code)
+[![Tests](https://github.com/Frazzer951/Advent-Of-Code/actions/workflows/tests.yaml/badge.svg)](https://github.com/Frazzer951/Advent-Of-Code/actions/workflows/tests.yaml)
 
 ![advent of code](./image_dark.svg#gh-dark-mode-only)
 ![advent of code](./image_light.svg#gh-light-mode-only)
 
 Collection of my Advent of Code solutions<br>
+
+</div>
 
 <!-- start completed section -->
 ## Completed ⭐️
