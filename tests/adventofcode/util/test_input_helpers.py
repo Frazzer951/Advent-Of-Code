@@ -1,7 +1,6 @@
 # type: ignore
 import os
 
-import pytest
 import pytest_mock
 from adventofcode.util import input_helpers
 from adventofcode.util.input_helpers import _get_input
@@ -36,11 +35,6 @@ def test_get_input_for_day_as_str(mocker: pytest_mock.MockerFixture):
     mock_read_file.assert_called_with(os.path.normpath("dir/inputs/2020/day_01.txt"))
 
     input_helpers.ROOT_DIR = original_root_dir
-
-
-@pytest.mark.skip()
-def test__read_lines():
-    ...
 
 
 def test__get_input(mocker: pytest_mock.MockerFixture):

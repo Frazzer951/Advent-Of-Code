@@ -1,33 +1,35 @@
 name: Update README
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - "src/adventofcode/year_*/**"
-      - "src/adventofcode/scripts/generate_readme.py"
+  schedule:
+    - cron: "0 */8 * * *" # Every 8 hours
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: joblo2213/aoc-badges-action@v3
+        name: Update Badges
         with:
-          python-version: "3.9"
-      - name: Install package
-        run: |
-          python -m pip install --upgrade pip
-          pip install -e .
-      - name: Generate new README
-        run: |
-          generate-readme
-          generate-benchmarks
-      - name: Commit new README
-        run: |
-          git config --global user.name 'Frazzer951'
-          git config --global user.email 'luke343279@gmail.com'
-          [[ -n $(git status -s) ]] && git commit -am "docs: update README"
-          git push
+          userid: 1052226
+          session: ${{ secrets.AOC_SESSION }}
+          # Optional inputs:
+          #
+          # year: 2021                                                                                     # The year for which stats should be retrieved
+          # leaderboard: 'https://adventofcode.com/2020/leaderboard/private/view/00000.json'               # The url of the leaderboard from witch the data is fetched. Typically your private leaderboard.
+          # file: 'README.md'                                                                              # The file that contains the badges
+          # dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge in your file.
+          # starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'             # Regular expression that finds the content of the stars badge in your file.
+          # daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'  # Regular expression that finds the content of the days completed badge iun your file.
+
+      - uses: k2bd/advent-readme-stars@v1
+        with:
+          userId: 1052226
+          leaderboardId: 1052226
+          sessionCookie: ${{ secrets.AOC_SESSION }}
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: Update README.md"
