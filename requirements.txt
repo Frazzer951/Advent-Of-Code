@@ -1,2 +1,2 @@
-more-itertools==8.13.0
-rich==12.5.1
+more-itertools
+rich
